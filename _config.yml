@@ -1,5 +1,5 @@
 # Site settings
-title: Hyuwah's Landing Page
+title: Hyuwah Github Page
 description: > # this means to ignore newlines until "baseurl:"
   A website for showcasing hyuwah's creation.
 baseurl: "/" # the subpath of your site, e.g. /blog/
@@ -10,6 +10,7 @@ markdown: kramdown
 paginate: 5 # pagination based on number of posts
 paginate_path: "page/:num"
 highlighter: pygments
+pygments: true
 gems: [jekyll-paginate]
 
 # comments
