@@ -14,7 +14,7 @@ pygments: true
 gems: [jekyll-paginate]
 
 # comments
-disqus: "hyuwah" # add disqus shortname here
+disqus: hyuwah # add disqus shortname here
 
 # author info
 # add your appropriate info here
