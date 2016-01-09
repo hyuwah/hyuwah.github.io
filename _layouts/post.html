@@ -78,7 +78,7 @@ permalink: pretty
       <h4>Share Post</h4>
 
 
-      <a id="twitter" class="mdl-button mdl-button--primary twitter" href="http://twitter.com/share?text={{page.title | encode}}&via=hyuwah"
+      <a id="twitters" class="mdl-button mdl-button--primary twitter" href="http://twitter.com/share?text={{page.title | encode}}&via=hyuwah"
          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="icon">
           <svg viewBox="0 0 16 16">
@@ -88,7 +88,7 @@ permalink: pretty
         </span>
         Twitter
       </a>
-      <div class="mdl-tooltip" for="twitter">
+      <div class="mdl-tooltip" for="twitters">
         Share post on Twitter
       </div>
       <a id="facebook" class="mdl-button mdl-button--primary facebook" href="https://www.facebook.com/sharer/sharer.php"
@@ -118,10 +118,7 @@ permalink: pretty
         <h4>Author</h4>
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--3-col author-avatar">
-          <img src="/assets/images/avatar_square.jpg" />
-          <!--
-            <img src="http://www.gravatar.com/avatar/{{site.email_md5}}?s=75" />
-            -->
+          <img src="/assets/images/{{site.avatar_image}}" />
           </div>
           <div class="mdl-cell mdl-cell--9-col">
             <h5 class="section-title author-name">

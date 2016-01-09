@@ -23,11 +23,7 @@
   <!-- Bottom row, not visible on scroll -->
   <div class="mdl-layout__header-row">
     <div class="paper-avatar">
-    <img src="/assets/images/avatar_square.jpg" height="75" width="75" />
-    <!--
-    <img src="http://a.disquscdn.com/uploads/users/118/7981/avatar92.jpg?1393699340" height="75" width="75" />
-      <img src="http://www.gravatar.com/avatar/{{ site.email_md5 }}?size=75"/>
-      -->
+    <img src="/assets/images/{{site.avatar_image}}" height="75" width="75" />
     </div>
     <div class="mdl-layout-spacer"></div>
     <!-- Navigation -->
@@ -45,10 +41,7 @@
 
 <div class="paper-drawer mdl-layout__drawer mdl-color--{{site.drawer.header_color}}">
   <header class="paper-drawer-header">
-  <img class="avatar" src="/assets/images/avatar_square.jpg">
-  <!--
-    <img class="avatar" src="http://www.gravatar.com/avatar/{{ site.email_md5 }}"/>
-    -->
+  <img class="avatar" src="/assets/images/{{site.avatar_image}}">
     <span class="paper-drawer-title">{{ site.title }}</span>
   </header>
 
