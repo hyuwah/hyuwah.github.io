@@ -1,5 +1,15 @@
-# hyuwah.github.io
+# Jekyll-Materialize
+Jekyll powered blog with Google materialize css by materializecss.com
 
-Website static buat portofolio software, cv dan blog proyek coding baik di github atau bukan.
+### Demo
+http://riefachan.github.io/jekyll-materialize/
 
-[Enter](http://hyuwah.github.io)
+### Usage
+[Jekyll](http://http://jekyllrb.com/)
+[Materializecss](http://materializecss.com/)
+
+### Features
+* [Materializecss](http://http://materializecss.com/)
+* Icons with [FontAwesome](https://fortawesome.github.io/Font-Awesome/)
+* Related posts
+* Disqus comment integrated

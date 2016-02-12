@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
+{% include head.html %}
 
-  {% include head.html %}
+<body>
+  <header>
+    {% include header.html %}
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer class="page-footer no-margin __top blue">
+    {% include footer.html %}
+  </footer>
 
-  <body>
-    <div class="paper-layout mdl-layout mdl-js-layout">
-      {% include header.html %}
+  <script type="text/javascript" src="{{ " /assets/js/jquery.js " | prepend: site.baseurl }}"></script>
+  <script type="text/javascript" src="{{ " /assets/js/materialize.js " | prepend: site.baseurl }}"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $(".button-collapse").sideNav({
+          menuWidth: 300, // Default is 240
+          edge: 'right', // Choose the horizontal origin
 
-      <main class="mdl-layout__content">
-        <div id="container" class="paper-container">
-          <div class="paper-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell">
-            {{ content }}
-          </div>
-        </div>
-        {% include footer.html %}
-      </main>
-    </div>
+        });
+            $(window).scroll(function() {
+        var y = $(window).scrollTop();
+        if (y > 0) {
+          $("#navbar").removeClass('z-depth-0').addClass('z-depth-1');
+        } else if (y==0) {
+          $("#navbar").removeClass('z-depth-1').addClass('z-depth-0');
+        } else {
+          $("#navbar").removeClass('z-depth-0').addClass('z-depth-1');
+        }
+      });
+    })
+  </script>
 
-    {% include google_analytics.html %}
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-    <script src="{{ 'assets/jekyll-search/jekyll-search.min.js' | prepend: site.baseurl | prepend: site.url}}"></script>
-    <script src="{{ 'scripts/app.js' | prepend: site.baseurl | prepend: site.url}}"></script>
-
-  </body>
+</body>
 
 </html>
