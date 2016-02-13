@@ -11,7 +11,7 @@ div.header-top
 }
 .parallax-container
 {
-	/*height: 500px;*/
+	height: 500px;
 	/*background-color:#57BDDB;
 	background: -webkit-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%);
 	background:    -moz-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%);
@@ -94,12 +94,12 @@ div.about-card h3
   top: 0;
 }
 .timeline .event:before {
-  left: -177.5px;
+  left: -166px;
   color: #212121;
   content: attr(data-date);
   text-align: right;
 /*  font-weight: 100;*/
-  font-size: 16px;
+  font-size: 14px;
   min-width: 120px;
 }
 .timeline .event:after {
@@ -125,7 +125,7 @@ Portfolio Styles
   padding-left: 10px;
 }
 section.intro {
-	margin-top: -625px;
+	margin-top: -275px;
 }
 section.portfolio
 {
@@ -264,7 +264,7 @@ Responsive Stuff
 		box-shadow: none;
 	}
 	section.intro{
-		margin-top:-550px;
+		margin-top:-250px;
 	}
 	section.portfolio
 	{

@@ -1,20 +1,37 @@
 ---
 layout: default
 ---
-<!-- top parallax -->
-<div class="parallax-container" style="height:800px;">
-  <div class="parallax" style="height:800px;"><img src="{{ site.mainimg}}" alt="main image" style="display:block;"></div>
 
+        <ul id="sticky" style="margin:100px 0 0 85%;z-index:10;" class="card-panel section table-of-contents hide-on-med-and-down">
+          <li><a id="toc-1" href="#about" style="
+            color:grey;
+
+            ">About</a></li>
+          <li><a id="toc-2" href="#portfolio" style="
+            color:grey;
+
+            ">Portfolio</a></li>
+          <li><a id="toc-3" href="#timeline" style="
+            color:grey;
+
+            ">Timeline</a></li>
+        </ul>
+
+
+<!-- top parallax -->
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="{{ site.mainimg}}" alt="main image" style="display:block;">
+  </div>
   <div class="header-top center-align container">
     <h1 class="white-text" style="font-weight:bold;">{{ site.owner.facebook.name }}</h1>
-    <h2 class="white-text">UI/UX Designer - Multimedia Developer - Brighton</h2>
+    <h2 class="white-text">Coding Lover - Instrumentation & Electronics Physics - Technology Enthusiast</h2>
   </div>
-
 </div>
 <!-- top parallax -->
 
-<section class="intro" id="about">
-  <div class="container">
+<section class="intro">
+  <div id="about" class="container section scrollspy">
     <div class="row about-card">
       <div class="col s12 l12  about-card-mobile">
         <div class="card hoverable">
@@ -31,13 +48,14 @@ layout: default
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <!-- Include Portfolio Items -->
 <section class="portfolio blue lighten-1">
-  <div id="portfolio" class="container portfolio-container">
+  <div class="container portfolio-container">
 
-    <div class="row">
+    <div  id="portfolio" class="row scrollspy">
       <div class="portfolio-header">
         <h3 class="white-text">Portfolio</h3>
         <p class="flow-text white-text">
@@ -45,8 +63,52 @@ layout: default
         </p>
       </div>
       <!-- portfolio item -->
+      <div>
       {% include portfolio.html %}
+      </div>
     </div>
 
   </div>
 </section>
+
+<div id="timeline" class="section scrollspy">
+<!-- include timeline -->
+    <section id="timeline">
+  <div class="container" id="content">
+  <div class="row">
+      <div class="col s12 m12 l12">
+        <h3 class="blue-text lighten-1 left-align">Timeline</h3>
+        <ul class="timeline">
+        <li class="event" data-date="2014">
+            <h3>PIMNAS 27: GULALI</h3>
+            <p>
+              Tahun 2014, saya mengikuti program kreativitas mahasiswa yang diadakan oleh DIKTI melalui karsa cipta GULALI (Gantungan Anti Lali) dan berhasil dipresentasikan secara nasional di Pekan Ilmiah Mahasiswa Nasional ke-27 yang bertempat di Universitas Diponegoro.
+            </p>
+          </li>
+          <li class="event" data-date="2014-2015">
+            <h3>Computational Physics Lab. Assistant</h3>
+            <p>
+             Claromentis is an intranet software provider company. I started working at the Brighton
+             office as a Marketing Designer while I was still attending my final year at the University
+             of Sussex. My primary responsibilities included creating corporate identity for the company;
+             I re-designed their website, and have created marketing materials such as brochures.
+            </p>
+            <p>Since
+             graduating from university, I have also undertaken responsibilities for designing a product
+             for the company. The roles I have been given have provided the perfect opportunity to implement
+             the skills I have gained throughout my higher education, as well as experiencing the running of a successful business.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- bottom parallax -->
+<div class="parallax-container" style="height:250px;">
+  <div class="parallax">
+    <img src="{{ site.mainimg}}" alt="main image" style="display:block;">
+  </div>
+</div>
+<!-- bottom parallax -->

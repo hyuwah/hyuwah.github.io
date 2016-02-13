@@ -1,15 +1,13 @@
-# Jekyll-Materialize
-Jekyll powered blog with Google materialize css by materializecss.com
+# hyuwah.github.io
+This is the source code for [hyuwah.github.io](http://hyuwah.github.io)
 
-### Demo
-http://riefachan.github.io/jekyll-materialize/
-
-### Usage
+## Tech Used
 [Jekyll](http://http://jekyllrb.com/)
 [Materializecss](http://materializecss.com/)
 
-### Features
-* [Materializecss](http://http://materializecss.com/)
-* Icons with [FontAwesome](https://fortawesome.github.io/Font-Awesome/)
-* Related posts
-* Disqus comment integrated
+## Credits
+This site is based on Jekyll-Materialize theme by riefachan and some adaptation from [Samet Erpik](http://erpik.com) website.
+Main image used on this site provided by [Sai Kiran Anagani](https://stocksnap.io/author/21245)
+
+## License
+MIT
