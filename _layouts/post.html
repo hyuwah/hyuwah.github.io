@@ -27,7 +27,7 @@ layout: default
                             {% for post in site.categories.[cat] limit:5 %}
                                 {% if post.title != page.title %}
                                         <a href="{{ post.url }}" class="collection-item avatar">
-                                            <i class="material-icons circle green">loyalty</i>
+                                            <i class="fa fa-tag circle green"></i>
                                             <span class="title light">{{ post.date | date: "%B %-d, %Y" }}</span>
                                             <p class="light">{{ post.title }}</p>
                                         </a>

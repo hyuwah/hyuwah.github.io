@@ -8,10 +8,12 @@ url: "http://yourdomain.com"
 # Build settings
 markdown: kramdown
 paginate: 5 # pagination based on number of posts
-paginate_path: "page/:num"
+#paginate_path: "page/:num"
+paginate_path: "/blog/page/:num"
 highlighter: rouge
 
 logo: Github-<b>Hyuwah</b>
+mainimg: https://snap-photos.s3.amazonaws.com/img-thumbs/960w/CWYK8CLC61.jpg
 
 owner:
     email: muhammad.whydn@gmail.com
@@ -31,7 +33,10 @@ owner:
 sass:
     sass_dir: _sass
     style: compressed
-permalink: "/article/:title"
-gems: 
+permalink: "/blog/:title"
+gems:
     - jekyll-paginate
     - jekyll-feed
+
+collections:
+  - projects

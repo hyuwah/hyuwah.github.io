@@ -54,7 +54,7 @@ main {
   }
 }
 .group-article .row:last-child .divider{
-  display: none
+  display: block;
 }
 .card {
     border-radius: 0;
@@ -82,7 +82,7 @@ article {
           font-weight: 200;
       }
       li {
-        list-style-type: disc;    
+        list-style-type: disc;
       }
       &.on-index {
         padding:0;

@@ -1,0 +1,304 @@
+/*Style CSS*/
+div.header-top
+{
+	margin-top: 8%;
+}
+.parallax-container h2
+{
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 38px;
+}
+.parallax-container
+{
+	/*height: 500px;*/
+	/*background-color:#57BDDB;
+	background: -webkit-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%);
+	background:    -moz-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%);
+	background:     -ms-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%);
+	background:      -o-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%);
+	background:         linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); */
+}
+
+/*center the nav*/
+ul.hide-on-med-and-down
+{
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+p.flow-text
+{
+	font-size: 1.4em;
+}
+/*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+About me Styles
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”*/
+.about-card
+{
+	margin-top: 96px;
+}
+div.about-card h3
+{
+/*margin-top: 5px;*/
+}
+.about-card p.flow-text
+{
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c;
+}
+
+/*timeline*/
+
+/* Base */
+#content {
+  margin-top: 50px;
+  text-align: center;
+}
+/* Timeline */
+.timeline {
+  border-left: 8px solid #42A5F5;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  color: #333;
+  margin: 50px auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  padding: 20px;
+  list-style: none;
+  text-align: left;
+}
+.timeline h1,
+.timeline h2,
+.timeline h3 {
+  font-size: 1.4em;
+}
+.timeline .event {
+  border-bottom: 1px solid rgba(160,160,160,0.2);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.timeline .event:before {
+  left: -177.5px;
+  color: #212121;
+  content: attr(data-date);
+  text-align: right;
+/*  font-weight: 100;*/
+  font-size: 16px;
+  min-width: 120px;
+}
+.timeline .event:after {
+  box-shadow: 0 0 0 8px #42A5F5;
+  left: -30px;
+  background: #212121;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+
+
+/**/
+
+
+/*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+Portfolio Styles
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”*/
+.portfolio-header
+{
+  padding-left: 10px;
+}
+section.intro {
+	margin-top: -625px;
+}
+section.portfolio
+{
+	padding: 10px;
+	margin-top:-200px;
+}
+section.portfolio h3
+{
+  margin-top: 220px;
+}
+.portfolio-item-wrapper
+{
+  /*border: 1px solid #ff0000;*/
+}
+div.portfolio-container
+{
+  /*border: 1px solid orange;*/
+}
+h2.card-title-top {
+  color: #727272;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  line-height: 1.7;
+}
+ .card .card-title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.card-content p {
+  line-height: inherit;
+  color: #727272;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+Lab Styling
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”*/
+section.lab
+{
+  padding-top: 10px;
+}
+
+/*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+Blog styling
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”*/
+section.blog
+{
+  background: url('../img/keyboard.jpg') no-repeat scroll center center / cover;
+  background-color: #fafafa !important;
+}
+.blog-inner
+{
+  background: rgba(255,255,255, .82);
+height: 100%;
+width: 100%;
+}
+section.blog h3
+{
+  padding-top: 10px;
+}
+
+
+
+
+/*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+Footer
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”*/
+ul.icons a
+{
+  color: #03A9F4;
+  font-size: 20px;
+}
+ul.icons a:hover
+{
+  color: #727272;
+}
+ul.icons span.label
+{
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+
+
+/*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+Responsive Stuff
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”*/
+@media (max-width: 945px){
+	 .timeline .event::before
+  {
+    left: 0.5px;
+    top:20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .timeline h3
+  {
+    font-size:16px;
+  }
+  .timeline p
+  {
+    padding-top: 20px;
+  }
+  section.lab h3.card-title
+  {
+    padding: 5px;
+    font-size: 16px
+  }
+}
+@media (max-width: 768px){
+
+	.about-card
+	{
+  		display: inline-block;
+  		position: static;
+		  margin-top: 0;
+	}
+	.row .col.offset-s3.about-card-mobile
+	{
+		margin-left: 0;
+		/*border: 1px solid #ff0000;*/
+	}
+	.row .col.s6.about-card-mobile
+	{
+		width: 100%;
+	}
+	.about-card .card
+	{
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	section.intro{
+		margin-top:-550px;
+	}
+	section.portfolio
+	{
+		margin-top: 0;
+	}
+  section.portfolio h3
+  {
+    margin-top: 0;
+  }
+	div.portfolio-container.container
+	{
+		margin-top:0px;
+	}
+  .timeline .event::before
+  {
+    left: 0.5px;
+    top:20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+   .timeline .event:nth-child(1)::before, .timeline .event:nth-child(3)::before, .timeline .event:nth-child(5)::before
+  {
+    top: 38px;
+  }
+  .timeline h3
+  {
+    font-size:16px;
+  }
+  .timeline p
+  {
+    padding-top: 20px;
+  }
+  section.lab h3.card-title
+  {
+    font-size: 20px;
+  }
+}

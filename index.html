@@ -1,64 +1,52 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="group-article">
-        <div class="row no-margin">
-            <div class="col s12">
-                <h2 class="blue-text center-align thin">Recent Post</h2>
-                <div class="divider"></div>
-            </div>
-        </div>
+<!-- top parallax -->
+<div class="parallax-container" style="height:800px;">
+  <div class="parallax" style="height:800px;"><img src="{{ site.mainimg}}" alt="main image" style="display:block;"></div>
 
-        {% for post in paginator.posts %}
-        <div class="row no-margin">
-            <a class="waves-effect" href="{{ post.url | prepend: site.baseurl }}">
-                <div class="col s12">
-                    <div class="list-article">
-                        <h4 class="blue-text thin"><i class="fa fa-pencil-square-o"></i> {{ post.title }}</h4>
-                        <p class="grey-text text-darken-1 light">Published at {{ post.date | date: "%B %-d, %Y" }}.</p>
-                        <article class="grey-text text-darken-2 post-content on-index light">
-                                {{ post.excerpt | strip_html }}. .
-                        </article>
-                        <br/>
-                    </div>
-                    <div class="divider"></div>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
+  <div class="header-top center-align container">
+    <h1 class="white-text" style="font-weight:bold;">{{ site.owner.facebook.name }}</h1>
+    <h2 class="white-text">UI/UX Designer - Multimedia Developer - Brighton</h2>
+  </div>
 
-    </div>
-
-    <div class="section">
-
-        {% if paginator.total_pages > 1 %}
-            <ul class="pagination center-align">
-
-                {% if paginator.previous_page %}
-                    <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-                {% else %}
-                    <li class="waves-effect disabled blue lighten-2"><a class="white-text" href="#">&laquo; Prev</a></li>
-                {% endif %}
-
-                {% for page in (1..paginator.total_pages) %}
-                    {% if page == paginator.page %}
-                        <li class="waves-effect active blue"><a href="#">{{ page }}</a></li>
-                    {% elsif page == 1 %}
-                        <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
-                    {% else %}
-                        <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-                    {% endif %}
-                {% endfor %}
-
-                {% if paginator.next_page %}
-                    <li class="waves-effect blue lighten-2"><a class="white-text" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-                {% else %}
-                    <li class="waves-effect disabled blue lighten-2"><a class="white-text" href="#">Next &raquo;</a></li>
-                {% endif %}
-
-            </ul>
-        {% endif %}
-
-    </div>
 </div>
+<!-- top parallax -->
+
+<section class="intro" id="about">
+  <div class="container">
+    <div class="row about-card">
+      <div class="col s12 l12  about-card-mobile">
+        <div class="card hoverable">
+          <div class="card-content">
+            <h3 class="blue-text lighten-1">Introduction </h3>
+            <p class="flow-text">
+              Hi, I am a UI/UX Designer from Purwakarta, Indonesia. I currently pursue a BSc in Physics from the Universitas Padjadjaran.
+            </p>
+            <p class="flow-text">
+              I have over 3 years of experience in web technologies. Working with computers, particularly in web development, has always been my passion. I love developing small web applications, as well as building and constructing websites from the ground up, with
+              the latest technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Include Portfolio Items -->
+<section class="portfolio blue lighten-1">
+  <div id="portfolio" class="container portfolio-container">
+
+    <div class="row">
+      <div class="portfolio-header">
+        <h3 class="white-text">Portfolio</h3>
+        <p class="flow-text white-text">
+          Some of my work
+        </p>
+      </div>
+      <!-- portfolio item -->
+      {% include portfolio.html %}
+    </div>
+
+  </div>
+</section>

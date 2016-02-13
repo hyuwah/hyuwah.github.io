@@ -1,0 +1,27 @@
+<!-- portfolio item -->
+{% for portfolio in site.projects %}
+<div class="col s12 m6 l4">
+  <div class="card hoverable">
+    <div class="card-image waves-effect waves-block waves-light">
+      <h2 class="left-align card-title-top">{{ portfolio.title }}</h2>
+      <div class="valign-wrapper card-img-wrap">
+        <img class="activator" src="{{ portfolio.imgurl }}" alt="{{ portfolio.imgalt }}" title="{{ portfolio.imgtitle }}">
+      </div>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator brand-text blue-text">Read more<i class="mdi-navigation-more-vert right"></i></span>
+      <p>{{ portfolio.category }}</p>
+    </div>
+    <div class="card-reveal">
+      <div class="rev-title-wrap">
+        <span class="card-title activator brand-text blue-text">{{ portfolio.title }}<i class="mdi-navigation-close blue-text right"></i></span>
+        <p>{{ portfolio.category }}</p>
+      </div>
+      <p class="rev-content">
+        {{ portfolio.content }}
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<!--  -->
