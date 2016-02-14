@@ -1,6 +1,6 @@
 ---
 title: "2048 Sundanese Edition"
-imgurl: "http://placehold.it/400/300/"
+imgurl: "https://raw.githubusercontent.com/hyuwah/2048-sundanese-edition/master/img/screenshot-electron.JPG"
 link: "http://hyuwah.github.io/2048-sundanese-edition"
 category: "Online 2048 Clone"
 ---

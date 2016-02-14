@@ -1,7 +1,9 @@
 ---
 title: "FW Cipher"
-imgurl: "http://placehold.it/400/300/"
-link: "http://github.com/hyuwah/fw-cipher"
+imgurl: "https://github.com/hyuwah/FW-Cipher/raw/master/MaterialProject/res/ss_run.PNG"
+link: "http://github.com/hyuwah/FW-cipher"
 category: "Encode/Decode Software"
 ---
-FW Cipher
+FW Cipher merupakan software enkripsi & dekripsi berbasis sandi caesar yang dimodifikasi. Beranjak dari proyek praktikum algoritma & pemrograman yang saya tempuh.
+
+Didevelop dengan VB.NET
