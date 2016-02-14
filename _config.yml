@@ -5,17 +5,20 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://hyuwah.github.io" # the base hostname & protocol for your site you most probably don't need to set it
 url: "http://yourdomain.com"
-# Build settings
-markdown: kramdown
-paginate: 5 # pagination based on number of posts
-#paginate_path: "page/:num"
-paginate_path: "/blog/page/:num"
-highlighter: rouge
 
+# Site Variables
 logo: Github-<b>Hyuwah</b>
-mainimg: https://snap-photos.s3.amazonaws.com/img-thumbs/960w/CWYK8CLC61.jpg
+#image used on frontpage parallax
+mainimg:
+  top: https://snap-photos.s3.amazonaws.com/img-thumbs/960w/CWYK8CLC61.jpg
+  bottom: https://snap-photos.s3.amazonaws.com/img-thumbs/960w/CWYK8CLC61.jpg
 
 owner:
+    name: "Muhammad Wahyudin"
+    taglines: "Coding Lover - Instrumentation & Electronics Physics - Technology Enthusiast"
+    shortdesc: > # Ignore newlines until next Variables
+      Hi, I am a UI/UX Designer from Purwakarta, Indonesia. I currently pursue a BSc in Physics from the Universitas Padjadjaran. I have over 3 years of experience in web technologies. Working with computers, particularly in web development, has always been my passion. I love developing small web applications, as well as building and constructing websites from the ground up, with
+      the latest technologies.
     email: muhammad.whydn@gmail.com
     facebook:
         show: true
@@ -24,12 +27,28 @@ owner:
     github:
         show: true
         username: "hyuwah"
+        url: "https://github.com/hyuwah/hyuwah.github.io"
     twitter:
-        show: false
-        username: ""
+        show: true
+        username: "hyuwah"
     disqus:
         show: true
         username: "hyuwah"
+    gplus:
+        show: false
+        url: ""
+    codepen:
+        show: true
+        username: "hyuwah"
+    linkedin:
+        show: true
+        url: "https://id.linkedin.com/in/hyuwah"
+
+# Build settings
+markdown: kramdown
+paginate: 5 # pagination based on number of posts
+paginate_path: "/blog/page/:num"
+highlighter: rouge
 sass:
     sass_dir: _sass
     style: compressed
@@ -38,5 +57,7 @@ gems:
     - jekyll-paginate
     - jekyll-feed
 
+# Collections
 collections:
   - projects
+  - timelines

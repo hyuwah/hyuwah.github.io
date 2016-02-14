@@ -2,30 +2,30 @@
 layout: default
 ---
 
-        <ul id="sticky" style="margin:100px 0 0 85%;z-index:10;" class="card-panel section table-of-contents hide-on-med-and-down">
-          <li><a id="toc-1" href="#about" style="
+<!-- TOC -->
+<ul id="sticky" style="margin:100px 0 0 85%;z-index:10;" class="card-panel section table-of-contents hide-on-med-and-down">
+  <li><a id="toc-1" href="#about" style="
             color:grey;
-
             ">About</a></li>
-          <li><a id="toc-2" href="#portfolio" style="
+  <li><a id="toc-2" href="#portfolio" style="
             color:grey;
-
             ">Portfolio</a></li>
-          <li><a id="toc-3" href="#timeline" style="
+  <li><a id="toc-3" href="#timeline" style="
             color:grey;
-
             ">Timeline</a></li>
-        </ul>
-
+  <li><a id="toc-4" href="#contact" style="
+            color:grey;
+            ">Contact</a></li>
+</ul>
 
 <!-- top parallax -->
-<div class="parallax-container">
+<div class="parallax-container" style="background-color:rgba(0,0,0,0.2);z-index:-1;">
   <div class="parallax">
-    <img src="{{ site.mainimg}}" alt="main image" style="display:block;">
+    <img class="dim" src="{{ site.mainimg.top }}" alt="top main image" style="display:block;">
   </div>
   <div class="header-top center-align container">
-    <h1 class="white-text" style="font-weight:bold;">{{ site.owner.facebook.name }}</h1>
-    <h2 class="white-text">Coding Lover - Instrumentation & Electronics Physics - Technology Enthusiast</h2>
+    <h1 class="white-text" style="font-weight:bold;">{{ site.owner.name }}</h1>
+    <h2 class="white-text">{{ site.owner.taglines }}</h2>
   </div>
 </div>
 <!-- top parallax -->
@@ -38,11 +38,7 @@ layout: default
           <div class="card-content">
             <h3 class="blue-text lighten-1">Introduction </h3>
             <p class="flow-text">
-              Hi, I am a UI/UX Designer from Purwakarta, Indonesia. I currently pursue a BSc in Physics from the Universitas Padjadjaran.
-            </p>
-            <p class="flow-text">
-              I have over 3 years of experience in web technologies. Working with computers, particularly in web development, has always been my passion. I love developing small web applications, as well as building and constructing websites from the ground up, with
-              the latest technologies.
+              {{ site.owner.shortdesc }}
             </p>
           </div>
         </div>
@@ -79,25 +75,7 @@ layout: default
       <div class="col s12 m12 l12">
         <h3 class="blue-text lighten-1 left-align">Timeline</h3>
         <ul class="timeline">
-        <li class="event" data-date="2014">
-            <h3>PIMNAS 27: GULALI</h3>
-            <p>
-              Tahun 2014, saya mengikuti program kreativitas mahasiswa yang diadakan oleh DIKTI melalui karsa cipta GULALI (Gantungan Anti Lali) dan berhasil dipresentasikan secara nasional di Pekan Ilmiah Mahasiswa Nasional ke-27 yang bertempat di Universitas Diponegoro.
-            </p>
-          </li>
-          <li class="event" data-date="2014-2015">
-            <h3>Computational Physics Lab. Assistant</h3>
-            <p>
-             Claromentis is an intranet software provider company. I started working at the Brighton
-             office as a Marketing Designer while I was still attending my final year at the University
-             of Sussex. My primary responsibilities included creating corporate identity for the company;
-             I re-designed their website, and have created marketing materials such as brochures.
-            </p>
-            <p>Since
-             graduating from university, I have also undertaken responsibilities for designing a product
-             for the company. The roles I have been given have provided the perfect opportunity to implement
-             the skills I have gained throughout my higher education, as well as experiencing the running of a successful business.</p>
-          </li>
+        {% include timeline.html %}
         </ul>
       </div>
     </div>
@@ -106,9 +84,76 @@ layout: default
 </div>
 
 <!-- bottom parallax -->
-<div class="parallax-container" style="height:250px;">
+<div class="parallax-container" style="height:250px;background-color:rgba(0,0,0,0.2);z-index:-1;">
   <div class="parallax">
-    <img src="{{ site.mainimg}}" alt="main image" style="display:block;">
+    <img class="dim" src="{{ site.mainimg.bottom }}" alt="bottom main image" style="display:block;">
   </div>
 </div>
 <!-- bottom parallax -->
+
+<section id="contact" class="section scrollspy">
+  <!-- contact form -->
+  <div class="container fade-in" style="display: block; opacity: 1;">
+    <div class="section">
+      <div class="row">
+        <h3 class="blue-text lighten-1">Contact</h3>
+        <!-- Socmed Links -->
+        <div class="col s12 m4">
+          <p>
+            I am always open to new ideas and visions. If you have an idea and would like to discuss, send me a message!
+          </p>
+          <ul class="icons">
+            {% if site.owner.linkedin.show == true %}
+            <li><a target="_blank" href="{{ site.owner.linkedin.url }}"><i class="fa fa-linkedin-square fa-lg fa-fw" style="vertical-align:middle;"></i>&nbsp;&nbsp;Linkedin</a></li>
+            {% endif %}
+            {% if site.owner.facebook.show == true %}
+            <li><a target="_blank" href="{{ site.owner.facebook.url }}"><i class="fa fa-facebook-square fa-lg fa-fw" style="vertical-align:middle;"></i>&nbsp;&nbsp;Facebook</a></li>
+            {% endif %}
+            {% if site.owner.twitter.show == true %}
+            <li><a target="_blank" href="https://twitter.com/{{ site.owner.twitter.username }}"><i class="fa fa-twitter fa-lg fa-fw" style="vertical-align:middle;"></i>&nbsp;&nbsp;Twitter</a></li>
+            {% endif %}
+
+            <li><a target="_blank" href="mailto:{{ site.owner.email }}"><i class="fa fa-send fa-lg fa-fw" style="vertical-align:middle;"></i>&nbsp;&nbsp;Email</a></li>
+
+          </ul>
+        </div>
+        <!-- Form contact -->
+        <div class="col s12 m8 grey-text text-darken-3">
+          <form action="//formspree.io/{{ site.owner.email }}" method="post" enctype="text/plain" id="contactForm">
+            <div class="input-field">
+              <input type="text" name="name" maxlength="50">
+              <label for="name" class="">
+                Name
+              </label>
+            </div>
+            <div class="input-field">
+              <input type="email" name="_replyto" class="validate">
+              <label for="email">
+                Email *
+              </label>
+            </div>
+            <div class="input-field">
+              <textarea name="message" rows="5" length="1000" maxlength="1000" class="materialize-textarea validate"></textarea>
+              <label for="message">
+                Message *
+              </label>
+              <input type="hidden" name="_subject" value="New submission from hyuwah.github.io"/>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <div id="contactdivT">
+                  <button type="submit" name="action" class="waves-effect waves-light pink accent-2 btn right tooltipped" data-position="bottom" data-delay="50" data-tooltip="This feature is under development, use email link on the left (or above if you're on mobile) to actually send me a message.">
+                  Send <i class="mdi-content-send right"></i>
+                  </button>
+                  <p class="pink-text accent-2" id="messageP"></p>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+</section>

@@ -1,0 +1,7 @@
+---
+title: "2048 Sundanese Edition"
+imgurl: "http://placehold.it/400/300/"
+link: "http://hyuwah.github.io/2048-sundanese-edition"
+category: "Online 2048 Clone"
+---
+2048 atau Dua Nol Opat Dalapan dalam bahasa sunda.

@@ -3,9 +3,13 @@
 <div class="col s12 m6 l4">
   <div class="card hoverable">
     <div class="card-image waves-effect waves-block waves-light">
-      <h2 class="left-align card-title-top">{{ portfolio.title }}</h2>
-      <div class="valign-wrapper card-img-wrap">
-        <img class="activator" src="{{ portfolio.imgurl }}" alt="{{ portfolio.imgalt }}" title="{{ portfolio.imgtitle }}">
+      <h2 class="left-align activator card-title-top tooltipped" data-position="top" data-delay="50" data-tooltip="Click to read more">{{ portfolio.title }}</h2>
+      <div class="valign-wrapper card-img-wrap hovereffect">
+        <img class="responsive-img" src="{{ portfolio.imgurl }}" alt="{{ portfolio.title }}">
+        <div class="overlay">
+          <h2>{{ portfolio.title }}</h2>
+          <a href="{{ portfolio.link }}" class="info" target="_blank">Go to project</a>
+        </div>
       </div>
     </div>
     <div class="card-content">

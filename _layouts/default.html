@@ -24,6 +24,10 @@
       $('.parallax').parallax();
       $('.scrollspy').scrollSpy();
       $('#sticky').pushpin({ top:0 });
+      $('#goup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+       });
       $(window).scroll(function() {
         var y = $(window).scrollTop();
         if (y > 0) {

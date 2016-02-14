@@ -3,7 +3,7 @@
 
     <div class="container container-large">
     <a class="brand-logo" href="{{ site.baseurl }}/" class="blue-text"><span class="light blue-text">{{ site.logo }}</span></a>
-
+    <!-- Nav menu large screen -->
     <ul class="right hide-on-med-and-down">
         {% for page in site.pages %}
             {% if page.title != null %}
@@ -12,10 +12,14 @@
               {% endunless %}
             {% endif %}
         {% endfor %}
-        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text">Feed</a></li>
+        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text" target="_blank">Feed<i class="fa fa-feed fa-lg" style="vertical-alignment:middle;margin-left:8px"></i></a></li>
+        <!--Fork button -->
+        <li style="background-color:#2196F3;border:1px solid;"><a class="waves-effect waves-light blue btn-flat" href="{{ site.github.owner.url }}" target="_blank" style="height:60px;line-height:60px;padding:0 12px;color:white;" >View on <i class="fa fa-github fa-2x right" style="color:white;margin-left:8px"></i></a></li>
     </ul>
+
     <a id="collapseButton" href="#" data-activates="slide-out" class="button-collapse right blue-text"><i class="fa fa-bars"></i></a>
     </div>
+    <!-- Nav menu medium and small screen -->
     <ul id="slide-out" class="side-nav">
         <li><a href="{{ site.baseurl }}/" class="blue-text">Home</a></li>
         {% for page in site.pages %}
@@ -25,7 +29,8 @@
           {% endunless %}
         {% endif %}
         {% endfor %}
-        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text">Feed</a></li>
+        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="blue-text" target="_blank">Feed<i class="fa fa-feed fa-lg" style="vertical-alignment:middle;margin-left:8px"></i></a></li>
+        <li><a class="red-text" href="{{ site.owner.github.url }}" target="_blank">View on <i class="fa fa-github fa-2x" style="vertical-align:middle;margin-left:8px"></i></a></li>
     </ul>
 </nav>
 </div>
