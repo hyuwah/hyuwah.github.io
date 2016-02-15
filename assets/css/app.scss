@@ -1,9 +1,9 @@
----
-# Transform Sass into css
----
-@import "materialize";
-@import "fontawesome";
-@import "pygments";
+// ---
+// Transform Sass into css
+// ---
+@import "assets/css/_sass/materialize";
+@import "assets/css/_sass/fontawesome";
+@import "assets/css/_sass/pygments";
 
 body {
   display: flex;
