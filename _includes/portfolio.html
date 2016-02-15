@@ -2,20 +2,23 @@
 {% for portfolio in site.projects %}
 <div class="col s12 m6 l4">
   <div class="card hoverable">
+
     <div class="card-image waves-effect waves-block waves-light">
       <h2 class="left-align activator card-title-top tooltipped" data-position="top" data-delay="50" data-tooltip="Click to read more">{{ portfolio.title }}</h2>
       <div class="valign-wrapper card-img-wrap hovereffect">
-        <img src="{{ portfolio.imgurl }}" alt="{{ portfolio.title }}">
+        <img align="middle" src="{{ portfolio.imgurl }}" alt="{{ portfolio.title }}" style="width:auto;height:300px;">
         <div class="overlay">
           <h2>{{ portfolio.title }}</h2>
           <a href="{{ portfolio.link }}" class="info" target="_blank">Go to project</a>
         </div>
       </div>
     </div>
+
     <div class="card-content">
       <span class="card-title activator brand-text blue-text">Read more<i class="mdi-navigation-more-vert right"></i></span>
       <p>{{ portfolio.category }}</p>
     </div>
+
     <div class="card-reveal">
       <div class="rev-title-wrap">
         <span class="card-title activator brand-text blue-text">{{ portfolio.title }}<i class="mdi-navigation-close blue-text right"></i></span>
@@ -25,6 +28,7 @@
         {{ portfolio.content }}
       </p>
     </div>
+
   </div>
 </div>
 {% endfor %}

@@ -10,8 +10,8 @@ url: "http://hyuwah.github.io"
 logo: Github-<b>Hyuwah</b>
 #image used on frontpage parallax
 mainimg:
-  top: https://snap-photos.s3.amazonaws.com/img-thumbs/960w/CWYK8CLC61.jpg
-  bottom: https://snap-photos.s3.amazonaws.com/img-thumbs/960w/CWYK8CLC61.jpg
+  top: assets/images/mainparalax.jpg
+  bottom: assets/images/mainparalax.jpg
 
 owner:
     name: "Muhammad Wahyudin"

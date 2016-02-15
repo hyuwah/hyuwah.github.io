@@ -1,5 +1,6 @@
   <div class="container container-large">
     <div class="row">
+
       <div class="col l4 s12">
         <h5 class="white-text">Links</h5>
         <ul>
@@ -9,7 +10,6 @@
           {% if site.owner.codepen.show == true %}
           <li><a target="_blank" class="grey-text text-lighten-3" href="http://codepen.io/{{ site.owner.codepen.username }}/"><i class="fa fa-codepen fa-lg fa-fw"></i>&nbsp;&nbsp;Codepen</a></li>
           {% endif %}
-
         </ul>
       </div>
 
@@ -18,11 +18,12 @@
         <p class="grey-text text-lighten-4">{{ site.description }}</p>
         <p><a class="white-text bold" href="#" id="goup">Go Up.</a></p>
       </div>
-    </div>
   </div>
+</div>
 
-  <div class="footer-copyright valign-wrapper">
-    <div class="container center-align"><p style="line-height:1.5;">Hyuwah &copy; {{ site.time | date: '%Y' }} | Build with <i class="fa fa-heartbeat"></i> and <a class="white-text" href="https://github.com/riefachan/jekyll-materialize">jekyll-materialize</a>
+<div class="footer-copyright valign-wrapper">
+  <div class="container center-align">
+    <p style="line-height:1.5;">Hyuwah &copy; {{ site.time | date: '%Y' }} | Build with <i class="fa fa-heartbeat"></i> and <a class="white-text" href="https://github.com/riefachan/jekyll-materialize">jekyll-materialize</a>
     </p>
-    </div>
   </div>
+</div>
