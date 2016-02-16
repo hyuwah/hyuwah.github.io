@@ -1,0 +1,123 @@
+| ---
+| layout: default
+| ---
+| 
+// TOC
+ul#sticky.card-panel.section.table-of-contents.hide-on-med-and-down(style='margin:100px 0 0 85%;z-index:98;')
+  li
+    a#toc-1(href='#about', style='\
+    color:grey;\
+    ') About
+  li
+    a#toc-2(href='#portfolio', style='\
+    color:grey;\
+    ') Portfolio
+  li
+    a#toc-3(href='#timeline', style='\
+    color:grey;\
+    ') Timeline
+  li
+    a#toc-4(href='#contact', style='\
+    color:grey;\
+    ') Contact
+// top parallax
+.parallax-container(style='background-color:rgba(0,0,0,0.2);z-index:-1;')
+  .parallax
+    img.dim(src='{{ site.mainimg.top }}', alt='top main image', style='display:block;')
+  .header-top.center-align.container
+    h1.white-text(style='font-weight:bold;') {{ site.owner.name }}
+    h2.white-text {{ site.owner.taglines }}
+// top parallax
+section.intro
+  #about.container.section.scrollspy
+    .row.about-card
+      .col.s12.l12.about-card-mobile
+        .card.hoverable
+          .card-content
+            h3.blue-text.lighten-1 Introduction 
+            p.flow-text
+              | {{ site.owner.shortdesc }}
+// Include Portfolio Items
+section.portfolio.blue.lighten-1
+  .container.portfolio-container
+    #portfolio.row.scrollspy
+      .portfolio-header
+        h3.white-text Portfolio
+        p.flow-text.white-text
+          | Some of my work
+      // portfolio item
+      div
+        | {% include portfolio.html %}
+#timeline.section.scrollspy
+  // include timeline
+  section#timeline
+    #content.container
+      .row
+        .col.s12.m12.l12
+          h3.blue-text.lighten-1.left-align Timeline
+          ul.timeline
+            | {% include timeline.html %}
+// bottom parallax
+.parallax-container(style='height:250px;background-color:rgba(0,0,0,0.2);z-index:-1;')
+  .parallax
+    img.dim(src='{{ site.mainimg.bottom }}', alt='bottom main image', style='display:block;')
+// bottom parallax
+section#contact.section.scrollspy(style='padding-bottom:0;')
+  // contact form
+  .container.fade-in(style='display: block; opacity: 1;')
+    .section
+      .row
+        h3.blue-text.lighten-1 Contact
+        // Socmed Links
+        .col.s12.m4
+          p
+            | I am always open to new ideas and visions. If you have an idea and would like to discuss, send me a message!
+          ul.icons
+            | {% if site.owner.linkedin.show == true %}
+            li
+              a(target='_blank', href='{{ site.owner.linkedin.url }}')
+                i.fa.fa-linkedin-square.fa-lg.fa-fw(style='vertical-align:middle;')
+                |   Linkedin
+            |             {% endif %}
+            |             {% if site.owner.facebook.show == true %}
+            li
+              a(target='_blank', href='{{ site.owner.facebook.url }}')
+                i.fa.fa-facebook-square.fa-lg.fa-fw(style='vertical-align:middle;')
+                |   Facebook
+            |             {% endif %}
+            |             {% if site.owner.twitter.show == true %}
+            li
+              a(target='_blank', href='https://twitter.com/{{ site.owner.twitter.username }}')
+                i.fa.fa-twitter.fa-lg.fa-fw(style='vertical-align:middle;')
+                |   Twitter
+            |             {% endif %}
+            li
+              a(target='_blank', href='mailto:{{ site.owner.email }}')
+                i.fa.fa-send.fa-lg.fa-fw(style='vertical-align:middle;')
+                |   Email
+        // Form contact
+        .col.s12.m8.grey-text.text-darken-3
+          form#contactForm(action='//formspree.io/{{ site.owner.email }}', method='post')
+            .input-field
+              input(type='text', name='name', maxlength='50', required='')
+              label(for='name')
+                | Name
+            .input-field
+              input.validate(type='email', name='_replyto', required='')
+              label(for='email')
+                | Email *
+            .input-field
+              textarea.materialize-textarea.validate(type='text', name='message', rows='5', length='1000', maxlength='1000')
+              label(for='message')
+                | Message *
+              input(type='hidden', name='_subject', value='New submission from hyuwah.github.io')
+              input(type='hidden', name='_next', value='http://hyuwah.github.io/thanks.html')
+              input(type='text', name='_gotcha', style='display:none')
+            .row
+              .col.s12
+                #contactdivT
+                  button#buttonForm.waves-effect.waves-light.pink.accent-2.btn.right(type='submit')
+                    | Send 
+                    i.mdi-content-send.right
+                  p#messageP.pink-text.accent-2
+  // 

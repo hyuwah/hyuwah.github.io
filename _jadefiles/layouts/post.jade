@@ -1,0 +1,44 @@
+| ---
+| layout: default
+| ---
+| 
+.card.z-depth-0.no-margin
+  .container
+    .section
+      .row
+        .col.s12
+          .card-content
+            .card-title.center-align
+              h2.thin.blue-text {{ page.title }}
+            h5.center-align.grey-text.text-darken-1.thin Published at {{ page.date | date: "%B %-d, %Y" }}
+            br
+            .divider
+            article.post-categories.center-align
+              .chip.teal.white-text Categories
+              |                     {% for cat in page.categories %}
+              .chip {{ cat }}
+              |  {% endfor %}
+            article.grey-text.text-darken-2.post-content
+              | {{ content }}
+            article.grey-text.text-darken-2
+              | {% for cat in page.categories %}
+              | {% if site.categories.[cat].size > 1 %}
+              aside.related
+                ul.collection.with-header
+                  li.collection-header
+                    h5.light
+                      | Related posts in 
+                      span.green-text {{ cat }}
+                      |  category
+                  |                             {% for post in site.categories.[cat] limit:5 %}
+                  |                                 {% if post.title != page.title %}
+                  a.collection-item.avatar(href='{{ post.url }}')
+                    i.fa.fa-tag.circle.green
+                    span.title.light {{ post.date | date: "%B %-d, %Y" }}
+                    p.light {{ post.title }}
+                  |                                 {% endif %}
+                  |                             {% endfor %}
+              |                         {% endif %}
+              |                     {% endfor %}
+            article.post-comment
+              | {% include comments.html %}

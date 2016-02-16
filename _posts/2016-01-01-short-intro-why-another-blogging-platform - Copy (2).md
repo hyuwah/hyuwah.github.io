@@ -9,4 +9,4 @@ Tempat blog baru lagi? Ngapain nambah lagi padahal udah punya blogger, tumblr sa
 
 Mungkin itulah pertanyaan yang terbersit ketika membuat / menulis post ini.  
 
-test [404](/cekaa)
+test [404](/cekaa/)

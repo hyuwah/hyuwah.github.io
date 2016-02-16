@@ -1,0 +1,21 @@
+doctype html
+html
+  | {% include head.html %}
+  body
+    header
+      | {% include header.html %}
+    main.content
+      | {{ content }}
+    footer.page-footer.no-margin.__top.blue
+      | {% include footer.html %}
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script.
+      window.jQuery || document.write('<script src="{{ " /assets/js/vendor/jquery.js " | prepend: site.baseurl }}"><\\/script>')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js')
+    script.
+      window.jQuery || document.write('<script src="{{ " /assets/js/vendor/materialize.min.js " | prepend: site.baseurl }}"><\\/script>')
+    script(type='text/javascript', src="{{ ' /assets/js/main.js ' | prepend: site.baseurl }}")
+    // Google Analytics: change UA-XXXXX-Y to be your site's ID.
+    script.
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;ga('create','UA-71920018-1','auto');ga('send','pageview')
+    script(src='https://www.google-analytics.com/analytics.js', async='', defer='')

@@ -1,0 +1,55 @@
+| ---
+| layout: default
+| title: Blog
+| ---
+| 
+.container
+  .group-article
+    .row.no-margin
+      .col.s12
+        h2.blue-text.center-align.thin Recent Post
+        .divider
+    |         {% for post in paginator.posts %}
+    .row.no-margin
+      a.waves-effect(href='{{ post.url | prepend: site.baseurl }}')
+        .col.s12
+          .list-article
+            h4.blue-text.thin
+              i.fa.fa-pencil-square-o
+              |  {{ post.title }}
+            p.grey-text.text-darken-1.light Published at {{ post.date | date: "%B %-d, %Y" }}.
+            article.grey-text.text-darken-2.post-content.on-index.light
+              | {{ post.excerpt | strip_html }}. .
+            br
+          .divider
+    |         {% endfor %}
+  .section
+    | {% if paginator.total_pages > 1 %}
+    ul.pagination.center-align
+      | {% if paginator.previous_page %}
+      li.waves-effect.blue.lighten-2
+        a.white-text(href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}") « Prev
+      |                 {% else %}
+      li.waves-effect.disabled.blue.lighten-2
+        a.white-text(href='#') « Prev
+      |                 {% endif %}
+      |                 {% for page in (1..paginator.total_pages) %}
+      |                     {% if page == paginator.page %}
+      li.waves-effect.active.blue
+        a(href='#') {{ page }}
+      |                     {% elsif page == 1 %}
+      li.waves-effect.blue.lighten-2
+        a.white-text(href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}") {{ page }}
+      |                     {% else %}
+      li.waves-effect.blue.lighten-2
+        a.white-text(href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}") {{ page }}
+      |                     {% endif %}
+      |                 {% endfor %}
+      |                 {% if paginator.next_page %}
+      li.waves-effect.blue.lighten-2
+        a.white-text(href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}") Next »
+      |                 {% else %}
+      li.waves-effect.disabled.blue.lighten-2
+        a.white-text(href='#') Next »
+      |                 {% endif %}
+    |         {% endif %}

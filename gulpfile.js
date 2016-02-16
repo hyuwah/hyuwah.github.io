@@ -29,7 +29,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'jade', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -56,9 +56,18 @@ gulp.task('sass', function () {
  *  Jade gulp task
  */
 gulp.task('jade', function(){
-  return gulp.src('_jadefiles/*.jade')
-  .pipe(jade())
-  .pipe(gulp.dest('_includes'));
+  gulp.src('_jadefiles/*.jade')
+      .pipe(jade())
+      .pipe(gulp.dest(''));
+  gulp.src('_jadefiles/blog/*.jade')
+      .pipe(jade())
+      .pipe(gulp.dest('blog'));
+  gulp.src('_jadefiles/includes/*.jade')
+      .pipe(jade())
+      .pipe(gulp.dest('_includes'));
+  return gulp.src('_jadefiles/layouts/*.jade')
+      .pipe(jade())
+      .pipe(gulp.dest('_layouts'));
 });
 
 /**
@@ -67,12 +76,12 @@ gulp.task('jade', function(){
  */
 gulp.task('watch', function () {
     gulp.watch(['assets/css/*.scss'], ['sass']);
-    gulp.watch(['_config.yml', '*.html', '_includes/*', '_layouts/*.html', '_posts/*', '_projects/*', '_timelines/*'], ['jekyll-rebuild']);
-    gulp.watch('_jadefiles/*.jade', ['jade']);
+    gulp.watch(['_jadefiles/blog/*.jade','_jadefiles/layouts/*.jade','_jadefiles/includes/*.jade','_jadefiles/*.jade'], ['jade']);
+    gulp.watch(['_config.yml', '*.html', '_includes/*', '_layouts/*.html', '_posts/*', '_projects/*', '_timelines/*','blog/*.html'], ['jekyll-rebuild']);
 });
-
+//
 /**
- * Default task, running just `gulp` will compile the sass,
+ * Default task, running just `gulp` will compile the sass, jade
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);

@@ -51,7 +51,7 @@ highlighter: rouge
 sass:
     sass_dir: _sass
     style: compressed
-permalink: "/blog/:title"
+permalink: "/blog/:title/"
 gems:
     - jekyll-paginate
     - jekyll-feed
