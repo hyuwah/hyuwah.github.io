@@ -20,6 +20,8 @@
      return false;
     });
 
+
+
     // Raised navbar
    $(window).scroll(function() {
      var y = $(window).scrollTop();
