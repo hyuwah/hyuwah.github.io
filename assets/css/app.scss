@@ -141,3 +141,13 @@ li.view-on-github{
     margin-left: 8px;
   }
 }
+
+.catbloc:not(:target) {
+    display: none;
+}
+
+ul.collapsible{
+  li{
+    list-style-type: none;
+  }
+}
