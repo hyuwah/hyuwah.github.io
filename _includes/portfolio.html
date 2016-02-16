@@ -5,8 +5,8 @@
 
     <div class="card-image waves-effect waves-block waves-light">
       <h2 class="left-align activator card-title-top tooltipped" data-position="top" data-delay="50" data-tooltip="Click to read more">{{ portfolio.title }}</h2>
-      <div class="valign-wrapper card-img-wrap hovereffect">
-        <img align="middle" src="{{ portfolio.imgurl }}" alt="{{ portfolio.title }}" style="width:auto;height:300px;">
+      <div class="valign-wrapper card-img-wrap hovereffect" style="background-image:url({{ portfolio.imgurl }});background-size:cover;background-position:center center;height:45vh;">
+        <!-- <img align="middle" src="{{ portfolio.imgurl }}" alt="{{ portfolio.title }}" style="width:auto;height:300px;"> -->
         <div class="overlay">
           <h2>{{ portfolio.title }}</h2>
           <a href="{{ portfolio.link }}" class="info" target="_blank">Go to project</a>
@@ -21,7 +21,7 @@
 
     <div class="card-reveal">
       <div class="rev-title-wrap">
-        <span class="card-title activator brand-text blue-text">{{ portfolio.title }}<i class="mdi-navigation-close blue-text right"></i></span>
+        <span class="card-title activator brand-text blue-text"><i class="mdi-navigation-close blue-text right"></i>{{ portfolio.title }}</span>
         <p>{{ portfolio.category }}</p>
       </div>
       <p class="rev-content">

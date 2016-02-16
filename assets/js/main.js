@@ -11,6 +11,8 @@
    $('.parallax').parallax();
    $('.scrollspy').scrollSpy();
    $('#sticky').pushpin({ top:0 });
+   $('.carousel').carousel();
+   $('.slider').slider({full_width: false});
 
    // Go Up smoothscroll
    $('#goup').click(function(){

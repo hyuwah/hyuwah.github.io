@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- TOC -->
-<ul id="sticky" style="margin:100px 0 0 85%;z-index:10;" class="card-panel section table-of-contents hide-on-med-and-down">
+<ul id="sticky" style="margin:100px 0 0 85%;z-index:98;" class="card-panel section table-of-contents hide-on-med-and-down">
   <li><a id="toc-1" href="#about" style="
             color:grey;
             ">About</a></li>
@@ -91,7 +91,7 @@ layout: default
 </div>
 <!-- bottom parallax -->
 
-<section id="contact" class="section scrollspy">
+<section id="contact" class="section scrollspy" style="padding-bottom:0;">
   <!-- contact form -->
   <div class="container fade-in" style="display: block; opacity: 1;">
     <div class="section">
@@ -121,13 +121,13 @@ layout: default
         <div class="col s12 m8 grey-text text-darken-3">
           <form action="//formspree.io/{{ site.owner.email }}" method="post" enctype="text/plain" id="contactForm">
             <div class="input-field">
-              <input type="text" name="name" maxlength="50">
+              <input type="text" name="name" maxlength="50" required>
               <label for="name" class="">
                 Name
               </label>
             </div>
             <div class="input-field">
-              <input type="email" name="_replyto" class="validate">
+              <input type="email" name="_replyto" class="validate" required>
               <label for="email">
                 Email *
               </label>
