@@ -1,0 +1,46 @@
+.navbar-fixed
+  nav#navbar.white.blue-text.z-depth-0
+    .container.container-large
+      a.brand-logo(href='{{ site.baseurl }}/')
+        span.light.blue-text {{ site.logo }}
+      // Nav menu large screen
+      ul.right.hide-on-med-and-down
+        | {% for page in site.pages %}
+        | {% if page.title != null %}
+        | {% unless page.url contains '/blog/page/' %}
+        li
+          a.blue-text(href='{{ page.url | prepend: site.baseurl }}') {{ page.title }}
+        |         {% endunless %}
+        |         {% endif %}
+        |         {% endfor %}
+        li
+          a.blue-text(href="{{ ' /feed.xml ' | prepend: site.baseurl }}", target='_blank')
+            | Feed
+            i.fa.fa-feed.fa-lg(style='vertical-alignment:middle;margin-left:8px')
+        // Fork button
+        li.view-on-github
+          a.waves-effect.waves-light.blue.btn-flat(href='{{ site.owner.github.url }}', target='_blank')
+            | View on 
+            i.fa.fa-github.fa-2x.right
+      a#collapseButton.button-collapse.right.blue-text(href='#', data-activates='slide-out')
+        i.fa.fa-bars
+    // Nav menu medium and small screen
+    ul#slide-out.side-nav
+      li
+        a.blue-text(href='{{ site.baseurl }}/') Home
+      |       {% for page in site.pages %}
+      |       {% if page.title != null %}
+      |       {% unless page.url contains '/blog/page/' %}
+      li
+        a.blue-text(href='{{ page.url | prepend: site.baseurl }}') {{ page.title }}
+      |       {% endunless %}
+      |       {% endif %}
+      |       {% endfor %}
+      li
+        a.blue-text(href="{{ ' /feed.xml ' | prepend: site.baseurl }}", target='_blank')
+          | Feed
+          i.fa.fa-feed.fa-lg(style='vertical-alignment:middle;margin-left:8px')
+      li
+        a.red-text(href='{{ site.owner.github.url }}', target='_blank')
+          | View on 
+          i.fa.fa-github.fa-2x(style='vertical-align:middle;margin-left:8px')
