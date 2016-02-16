@@ -11125,3 +11125,14 @@ footer.page-footer {
   font-size: 13px;
   line-height: 1.5;
   letter-spacing: -0.003em; }
+
+li.view-on-github {
+  background-color: #2196F3; }
+  li.view-on-github a {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 12px;
+    color: white; }
+  li.view-on-github i {
+    color: white;
+    margin-left: 8px; }

@@ -104,3 +104,17 @@ footer.page-footer {
   line-height: 1.5;
   letter-spacing: -0.003em;
  }
+
+li.view-on-github{
+  background-color: #2196F3;
+  a {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 12px;
+    color: white;
+  }
+  i {
+    color:white;
+    margin-left: 8px;
+  }
+}
