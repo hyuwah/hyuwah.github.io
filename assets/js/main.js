@@ -4,45 +4,38 @@
  */
 
 // TODO:20 optimisasi skrip transisi page
-// FIXME: Waktu load pertama atau random, skrip materializenya ga aktif, kalo reload baru bisa
 //
-//
+
+$(document).ready(function() {
+   paket();
+});
  // Contents of functions.js
  $(function(){
  'use strict';
- var $page = $('#main'),
-    options = {
-      debug: true,
-      prefetch: true,
-      cacheLength: 2,
-      onStart: {
-        duration: 1500, // Duration of our animation
-        render: function ($container) {
-          // Add your CSS animation reversing class
-          $container.addClass('is-exiting');
-          // Restart your animation
-          smoothState.restartCSSAnimations();
+ var $body = $('html, body'),
+      content = $('#main').smoothState({
+        // Runs when a link has been activated
+        onStart: {
+          duration: 1000, // Duration of our animation
+          render: function (url, $container) {
+            // toggleAnimationClass() is a public method
+            // for restarting css animations with a class
+            content.toggleAnimationClass('is-exiting');
+            // Scroll user to the top, this is very important, transition may not work without this
+            $body.animate({
+              scrollTop: 0
+            });
+          }
+        },
+        // runs when the new content has been injected into the page and all animations are complete
+        onAfter: function($container, $newContent) {
+            paket();
         }
-      },
-      onReady: {
-        duration: 0,
-        render: function ($container, $newContent) {
-          // Remove your CSS animation reversing class
-          $container.removeClass('is-exiting');
-          // Inject the new content
-          $container.html($newContent);
-          // Materialize jquery initialization
-          paket();
-
-        }
-      }
-    },
-    smoothState = $page.smoothState(options).data('smoothState');
+      }).data('smoothState');
+      //.data('smoothState') makes public methods available
     });
 
-  $(document).ready(function() {
-    paket();
- });
+
 
 var paket = function(){
   $(".button-collapse").sideNav({
@@ -50,7 +43,7 @@ var paket = function(){
     });
   $('.parallax').parallax();
   $('.scrollspy').scrollSpy();
-  $('#sticky').pushpin({ top:0 });
+  $('#sticky').pushpin();//{ top:0 });
   $('.carousel').carousel();
   $('.collapsible').collapsible({accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
