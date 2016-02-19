@@ -11162,3 +11162,6 @@ li.view-on-github {
 
 ul.collapsible li {
   list-style-type: none; }
+
+header {
+  z-index: 998; }
