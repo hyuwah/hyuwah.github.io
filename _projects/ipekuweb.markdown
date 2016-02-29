@@ -4,4 +4,10 @@ imgurl: "https://raw.githubusercontent.com/hyuwah/ipeku-web/2cc391930ba31c14548b
 link: "http://hyuwah.github.io/ipeku-web"
 category: "Online GPA Calculator"
 ---
+Deskripsi on progress..
+<div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+
 IPEKU
+Penghitung indeks prestasi dengan sistem A B C D E dan rentang 0 - 4.

@@ -13,10 +13,15 @@
         |         {% endunless %}
         |         {% endif %}
         |         {% endfor %}
+        // SKRIPSI BUTTON
+        li
+          a.blue-text(href='http://hyuwah.github.io/skripsi')
+            | Skripsi
+            i.fa.fa-flask(style='vertical-alignment:middle;margin-left:8px')
+        // RSS button
         li
           a.blue-text(href='http://feeds.feedburner.com/HyuwahGithubPage', target='_blank')
-            | Feed
-            i.fa.fa-feed.fa-lg(style='vertical-alignment:middle;margin-left:8px')
+            i.fa.fa-feed(style='vertical-alignment:middle;margin-left:8px')
         // Fork button
         li.view-on-github
           a.waves-effect.waves-light.blue.btn-flat(href='{{ site.owner.github.url }}', target='_blank')
@@ -36,6 +41,11 @@
       |       {% endunless %}
       |       {% endif %}
       |       {% endfor %}
+      // SKRIPSI BUTTON
+      li
+        a.blue-text(href='http://hyuwah.github.io/skripsi')
+          | Skripsi
+          i.fa.fa-flask.fa-lg(style='vertical-alignment:middle;margin-left:8px')
       li
         a.blue-text(href='http://feeds.feedburner.com/HyuwahGithubPage', target='_blank')
           | Feed

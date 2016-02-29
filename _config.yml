@@ -1,13 +1,13 @@
 # Site settings
-title: Hyuwah Github Page
+title: Muhammad Wahyudin's Page
 description: > # this means to ignore newlines until "baseurl:"
   A website for showcasing hyuwah's creation.
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://hyuwah.github.io" # the base hostname & protocol for your site you most probably don't need to set it
-url: "http://hyuwah.github.io"
+url: "http://hyuwah.me"
 
 # Site Variables
-logo: Github-<b>Hyuwah</b>
+logo: <img  src="/assets/favicon/favicon-96x96.png" width="24" style="vertical-align:middle;"> hyuwah<b>.me</b>
 #image used on frontpage parallax
 mainimg:
   top: assets/images/mainparalax.jpg
@@ -15,9 +15,9 @@ mainimg:
 
 owner:
     name: "Muhammad Wahyudin"
-    taglines: "Coding Lover - Instrumentation & Electronics Physics - Technology Enthusiast"
+    taglines: "Coding Lover - Instrumentation & Electronics Physicist - Technology Enthusiast"
     shortdesc: > # Ignore newlines until next Variables
-      Hi, Saya mahasiswa S1 Fisika Universitas Padjadjaran dari Purwakarta, Indonesia. 2 tahun sudah saya berkecimpung di dunia coding. Mulai dari fisika komputasi dengan Matlab hingga programming mikrokontroler untuk sistem instrumentasi dengan C bahkan Assembly. Disamping itu, saya sangat tertarik dengan hal berbau teknologi, terlebih dunia front-end web development.
+      <p>Hi, Saya mahasiswa tingkat akhir S1 Fisika Universitas Padjadjaran dari Purwakarta, Indonesia.<br> 2 tahun sudah saya berkecimpung di dunia coding. Mulai dari komputasi fisika dengan Matlab hingga programming mikrokontroler untuk sistem instrumentasi dengan C bahkan Assembly. Saya pun sangat tertarik dengan hal berbau teknologi.<br> Disamping mengerjakan tugas akhir yang berjudul <em>"Perancangan Sistem Pengukuran Zeta Potensial dengan Metode Potensial Sedimentasi"</em>, saya juga menekuni dunia front-end web development melalui situs ini, sub halaman skripsi, dan beberapa proyek lainnya. </p>.
     email: muhammad.whydn@gmail.com
     facebook:
         show: true

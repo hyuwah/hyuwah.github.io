@@ -40,7 +40,7 @@ About me Styles
 }
 div.about-card h3
 {
-/*margin-top: 5px;*/
+margin-top: 5px;
 }
 .about-card p.flow-text
 {
@@ -369,9 +369,9 @@ transition-delay:.2s;
  * Image Dim
  */
 img.dim {
- filter: brightness(75%);
- -webkit-filter: brightness(75%);
- -moz-filter: brightness(75%);
- -o-filter: brightness(75%);
- -ms-filter: brightness(75%);
+ filter: brightness(50%);
+ -webkit-filter: brightness(50%);
+ -moz-filter: brightness(50%);
+ -o-filter: brightness(50%);
+ -ms-filter: brightness(50%);
  }

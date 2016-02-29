@@ -3,7 +3,8 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var jade          = require('gulp-jade');
+var jade        = require('gulp-jade');
+var plumber     = require('gulp-plumber');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -42,6 +43,7 @@ gulp.task('browser-sync', ['sass', 'jade', 'jekyll-build'], function() {
  */
 gulp.task('sass', function () {
     return gulp.src('assets/css/app.scss')
+        .pipe(plumber())
         .pipe(sass({
             includePaths: ['css'],
             onError: browserSync.notify
@@ -57,15 +59,19 @@ gulp.task('sass', function () {
  */
 gulp.task('jade', function(){
   gulp.src('_jadefiles/*.jade')
+      .pipe(plumber())
       .pipe(jade())
       .pipe(gulp.dest(''));
   gulp.src('_jadefiles/blog/*.jade')
+      .pipe(plumber())
       .pipe(jade())
       .pipe(gulp.dest('blog'));
   gulp.src('_jadefiles/includes/*.jade')
+      .pipe(plumber())
       .pipe(jade())
       .pipe(gulp.dest('_includes'));
   return gulp.src('_jadefiles/layouts/*.jade')
+      .pipe(plumber())
       .pipe(jade())
       .pipe(gulp.dest('_layouts'));
 });
