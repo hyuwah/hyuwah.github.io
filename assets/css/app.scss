@@ -19,7 +19,12 @@ main {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  width: 80%;
+  width: 95%;
+}
+.container-front {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
 }
 .content{
   position: relative;
@@ -36,13 +41,20 @@ main {
   .container {
     width: 75%;
   }
+  .container-front{
+    width: 75%;
+  }
   .content{
     margin-bottom: 308px;
   }
+
 }
 @media #{$large-and-up} {
   .container {
     width: 60%;
+  }
+  .container-front{
+    width: 65%;
   }
   .content{
     margin-bottom: 206px;

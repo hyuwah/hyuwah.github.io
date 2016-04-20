@@ -1,10 +1,10 @@
 // portfolio item
 | {% for portfolio in site.projects %}
-.col.s12.m6.l4
+.col.s12.m6
   .card.hoverable
     .card-image.waves-effect.waves-block.waves-light
       h2.left-align.activator.card-title-top.tooltipped(data-position='top', data-delay='50', data-tooltip='Click to read more') {{ portfolio.title }}
-      .valign-wrapper.card-img-wrap.hovereffect(style='background-image:url({{ portfolio.imgurl }});background-size:cover;background-position:center center;height:45vh;')
+      .valign-wrapper.card-img-wrap.hovereffect(style='background-image:url({{ portfolio.imgurl }});background-size:cover;background-position:center center;height:25vh;')
         // <img align="middle" src="{{ portfolio.imgurl }}" alt="{{ portfolio.title }}" style="width:auto;height:300px;">
         .overlay
           h2 {{ portfolio.title }}

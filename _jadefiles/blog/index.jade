@@ -11,7 +11,7 @@
         .divider
     |         {% for post in paginator.posts %}
     .row.no-margin
-      a.waves-effect(href='{{ post.url | prepend: site.baseurl }}')
+      a.waves-effect(href='{{ post.url | prepend: site.baseurl }}' style="width:100%")
         .col.s12
           .list-article
             h4.blue-text.thin
