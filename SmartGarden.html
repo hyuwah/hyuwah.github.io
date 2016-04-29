@@ -1,0 +1,60 @@
+---
+layout: default
+sitemap: false
+permalink: /smartgarden/
+---
+
+<div id="chart-container" style="margin:0 5% 0 5%;height: 600px;">
+        <div class="progress" style="margin:5% 5% 0 5%;">
+            <div class="indeterminate"></div>
+        </div>
+
+    </div>
+    <div style="margin:5% 5% 5% 5%" id="below chart">
+        <div class="row">
+            <button class="btn waves-effect waves-light grey darken-3" value="Hide All" name="Hide All Button" onclick="HideAll();">Hide All
+            </button>
+            <button class="btn waves-effect waves-light blue darken-3" value="Show All" name="Show All Button" onclick="ShowAll();">Show All
+            </button>
+            <button class="btn waves-effect waves-light" value="Load More Data" name="Load More Data" onclick="loadOneChannel();">Load More Historical Data </button>
+            <input class="filled-in" id="Update" name="Update" type="checkbox" checked="checked" />
+            <label for="Update" style="margin:0 8px">Update Charts (Latency)</label>
+        </div>
+        <div class="row">
+           <div class="input-field col s4">
+            <select id="Channel Select">
+              <option value="" disabled selected>Choose your option</option>
+            </select>
+          </div>
+            <div class="input-field col s4">
+            <select id="Loads">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 Load</option>
+                <option value="2">2 Loads</option>
+                <option value="3">3 Loads</option>
+                <option value="4">4 Loads</option>
+                <option value="5" selected="selected">5 Loads</option>
+                <option value="6">6 Loads</option>
+                <option value="7">7 Loads</option>
+                <option value="8">8 Loads</option>
+                <option value="9">9 Loads</option>
+                <option value="10">10 Loads</option>
+                <option value="15">15 Loads</option>
+                <option value="20">20 Loads</option>
+                <option value="25">25 Loads</option>
+                <option value="30">30 Loads</option>
+                <option value="40">40 Loads</option>
+                <option value="50">50 Loads</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+<!-- Dependencies scripts -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.highcharts.com/stock/highstock.js"></script>
+<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://rawgithub.com/highslide-software/export-csv/master/export-csv.js"></script>
+
+<!-- Core JS -->
+<script src="/assets/js/smartgardenchart.js"></script>
