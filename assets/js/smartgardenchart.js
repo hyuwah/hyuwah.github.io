@@ -230,7 +230,7 @@ $(document).ready(function() {
                     text: 'All'
                 }],
                 inputEnabled: true,
-                selected: 4 //Change to 4th button as default
+                selected: 2 //Change to 3rd button as default
             },
             plotOptions: {
                 line: {

@@ -4,29 +4,38 @@ sitemap: false
 permalink: /smartgarden/
 ---
 
-<div id="chart-container" style="margin:0 5% 0 5%;height: 600px;">
-        <div class="progress" style="margin:5% 5% 0 5%;">
-            <div class="indeterminate"></div>
-        </div>
 
+<div id="chart-container" style="margin:0 5% 0 5%;height: 480px;">
+    <div class="progress" style="margin:20% 0% 0 0%;">
+        <div class="indeterminate"></div>
     </div>
-    <div style="margin:5% 5% 5% 5%" id="below chart">
-        <div class="row">
-            <button class="btn waves-effect waves-light grey darken-3" value="Hide All" name="Hide All Button" onclick="HideAll();">Hide All
-            </button>
-            <button class="btn waves-effect waves-light blue darken-3" value="Show All" name="Show All Button" onclick="ShowAll();">Show All
-            </button>
-            <button class="btn waves-effect waves-light" value="Load More Data" name="Load More Data" onclick="loadOneChannel();">Load More Historical Data </button>
-            <input class="filled-in" id="Update" name="Update" type="checkbox" checked="checked" />
-            <label for="Update" style="margin:0 8px">Update Charts (Latency)</label>
-        </div>
-        <div class="row">
-           <div class="input-field col s4">
+</div>
+
+<div  id="container">
+    <div class="row" id="inner" style="padding:0% 5% 0% 5%">
+        <div class="col s4" id="gauge_div_1" style="padding-right:8%; padding-left: 8%;"></div>
+        <div class="col s4" id="gauge_div_2" style="padding-right:8%; padding-left: 8%;"></div>
+        <div class="col s4" id="gauge_div_3" style="padding-right:8%; padding-left: 8%;"></div>
+    </div>
+</div>
+
+<div style="margin:2% 5% 2% 5%" id="below chart">
+    <div class="row">
+        <button class="btn waves-effect waves-light grey darken-3" value="Hide All" name="Hide All Button" onclick="HideAll();">Hide All
+        </button>
+        <button class="btn waves-effect waves-light blue darken-3" value="Show All" name="Show All Button" onclick="ShowAll();">Show All
+        </button>
+        <button class="btn waves-effect waves-light" value="Load More Data" name="Load More Data" onclick="loadOneChannel();">Load More Historical Data </button>
+        <input class="filled-in" id="Update" name="Update" type="checkbox" checked="checked" />
+        <label for="Update" style="margin:0 8px">Update Charts (Latency)</label>
+    </div>
+    <div class="row">
+        <div class="input-field col s4">
             <select id="Channel Select">
-              <option value="" disabled selected>Choose your option</option>
+                <option value="" disabled selected>Choose your option</option>
             </select>
-          </div>
-            <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
             <select id="Loads">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">1 Load</option>
@@ -46,9 +55,13 @@ permalink: /smartgarden/
                 <option value="40">40 Loads</option>
                 <option value="50">50 Loads</option>
             </select>
-          </div>
         </div>
     </div>
+
+    <div style="font-size:smaller;">*Best viewed on 1366x768px with modern browser</div>
+</div>
+
+
 
 <!-- Dependencies scripts -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -58,3 +71,116 @@ permalink: /smartgarden/
 
 <!-- Core JS -->
 <script src="/assets/js/smartgardenchart.js"></script>
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+    // set your channel id here
+    var channel_id = 110398;
+    // set your channel's read api key here if necessary
+    var api_key = 'Y6T3DUWO7N3SL6RC';
+
+    // name of the gauge
+    var gauge_name1 = 'Lux';
+    var gauge_name2 = '%RH';
+    var gauge_name3 = '°C';
+
+    // global variables
+    var chart, charts, data;
+
+    // load the google gauge visualization
+    google.load('visualization', '1', {
+        packages: ['gauge']
+    });
+    google.setOnLoadCallback(initChart);
+
+    // display the data
+    function displayData(point,baris,gauge_name) {
+        data.setValue(0, 0, gauge_name);
+        data.setValue(0, 1, point);
+        if (baris==0) {
+          chart_lux.draw(data, options_lux);
+        }
+        if (baris==1) {
+          chart_hum.draw(data, options_hum);
+        }
+        if (baris==2) {
+          chart_temp.draw(data, options_temp);
+        }
+
+    }
+
+    // load the data
+    function loadData() {
+        // variable for the data point
+        var hum;
+        var temp;
+        var lux;
+
+        // get the data from thingspeak
+        $.getJSON('https://api.thingspeak.com/channels/' + channel_id + '/feed/last.json?api_key=' + api_key, function(data) {
+
+            // get the data point
+            lux = data.field1;
+            hum = data.field2;
+            temp = data.field3;
+
+            // if there is a data point display it
+            if (lux) {
+                displayData(lux,0,gauge_name1,options_lux);
+            }
+            if (hum) {
+                displayData(hum,1,gauge_name2,options_hum);
+            }
+            if (temp) {
+                displayData(temp,2,gauge_name3,options_temp);
+            }
+
+        });
+    }
+
+    // initialize the chart
+    function initChart() {
+
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Label');
+        data.addColumn('number', 'Value');
+        data.addRows(1);
+
+        chart_lux = new google.visualization.Gauge(document.getElementById('gauge_div_1'));
+        chart_hum = new google.visualization.Gauge(document.getElementById('gauge_div_2'));
+        chart_temp = new google.visualization.Gauge(document.getElementById('gauge_div_3'));
+
+        options_lux = {
+            max: 1000,
+            width: 400,
+            height: 120,
+            minorTicks: 5
+        };
+        options_hum = {
+            width: 400,
+            height: 120,
+            redFrom: 0,
+            redTo: 30,
+            yellowFrom: 30,
+            yellowTo: 50,
+            greenFrom: 70,
+            greenTo:90,
+            minorTicks: 5
+        };
+        options_temp = {
+            width: 400,
+            height: 120,
+            redFrom: 40,
+            redTo: 100,
+            yellowFrom: 35,
+            yellowTo: 40,
+            greenFrom: 20,
+            greenTo:35,
+            minorTicks: 5
+        };
+
+        loadData();
+
+        // load new data every 15 seconds
+        setInterval('loadData()', 15000);
+    }
+</script>

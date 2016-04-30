@@ -375,3 +375,22 @@ img.dim {
  -o-filter: brightness(50%);
  -ms-filter: brightness(50%);
  }
+
+/*
+Smart Garden
+*/
+ #container {
+		 height: 100%;
+		 width: 100%;
+		 display: table;
+ }
+
+ #inner {
+		 vertical-align: middle;
+		 display: table-cell;
+ }
+
+ div.gauge_div {
+		 width: 400px;
+		 margin: 0 auto;
+ }
