@@ -9,7 +9,7 @@
     img.dim(src='{{ site.mainimg.top }}', alt='top main image', style='display:block;')
   .header-top.center-align.container-front(style="margin-top:5%")
     div.hide-on-med-and-down(style="margin:-25px")
-      img.responsive-img.circle(src="https://lh3.googleusercontent.com/INYwS8FXRGH88sGmxKPj-_xrWOlHxhFeOEImZzBmgkb3G7Pr_3urq5_MPzyjRfx-Qc5T=w1107-h623-rw-no", width="96")
+      img.responsive-img.circle(src="assets/images/linkedinimager.jpg", width="96")
     h1.white-text(style='font-weight:bold;') {{ site.owner.name }}
     h2.white-text {{ site.owner.taglines }}
 // top parallax
@@ -20,10 +20,9 @@ section.intro
         .card.hoverable
           .card-content
             div.hide-on-large-only.center-align(style="margin:0px")
-              img.responsive-img.circle(src="https://lh3.googleusercontent.com/INYwS8FXRGH88sGmxKPj-_xrWOlHxhFeOEImZzBmgkb3G7Pr_3urq5_MPzyjRfx-Qc5T=w1107-h623-rw-no", width="96")
+              img.responsive-img.circle(src="assets/images/linkedinimage.jpg", width="96")
             h3.blue-text.lighten-1 Introduction 
-            p.flow-text
-              | {{ site.owner.shortdesc }}
+            p.flow-text Hi, I'm Wahyu, fresh graduate with bachelor's degree in Physics from Universitas Padjadjaran. 
 // Include Portfolio Items
 section.portfolio.blue.lighten-1
   .container-front.portfolio-container
@@ -68,9 +67,8 @@ section#contact.section.scrollspy(style='padding-bottom:0;')
         // Socmed Links
         .col.s12.m4
           p
-            | Jika kamu ingin berdiskusi maupun sekedar tukar sapa, 
-            em feel free 
-            | untuk menghubungi saya via media sosial dibawah ataupun formulir berikut. :)
+            | If you'd like to discuss something or just want to say hi, feel free 
+            | to contact me via social medias below or this form. :)
           ul.icons
             | {% if site.owner.linkedin.show == true %}
             li
@@ -115,8 +113,8 @@ section#contact.section.scrollspy(style='padding-bottom:0;')
             .row
               .col.s12
                 #contactdivT
-                  button#buttonForm.waves-effect.waves-light.pink.accent-2.btn.right(type='submit')
+                  button#buttonForm.waves-effect.waves-light.red.accent-2.btn.right(type='submit')
                     | Send 
                     i.mdi-content-send.right
-                  p#messageP.pink-text.accent-2
+                  p#messageP.red-text.accent-2
   // 

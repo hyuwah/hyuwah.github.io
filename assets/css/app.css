@@ -8636,7 +8636,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -10876,7 +10876,7 @@ main {
 
 @media only screen and (min-width: 601px) {
   .container {
-    width: 75%; }
+    width: 85%; }
   .container-front {
     width: 75%; }
   .content {
@@ -10884,7 +10884,7 @@ main {
 
 @media only screen and (min-width: 993px) {
   .container {
-    width: 60%; }
+    width: 80%; }
   .container-front {
     width: 65%; }
   .content {
@@ -10977,3 +10977,40 @@ ul.collapsible li {
 
 header {
   z-index: 998; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #2196f3; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #2196f3;
+  box-shadow: 0 1px 0 0 #2196f3; }
+
+/* label focus color */
+.input-field input[type=email]:focus + label {
+  color: #2196f3; }
+
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #2196f3;
+  box-shadow: 0 1px 0 0 #2196f3; }
+
+/* label focus color */
+.input-field textarea[type=text]:focus + label {
+  color: blue; }
+
+/* label underline focus color */
+.input-field textarea[type=text]:focus {
+  border-bottom: 1px solid #2196f3;
+  box-shadow: 0 1px 0 0 #2196f3; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #2196f3; }
+
+.table-of-contents a.active {
+  border-left: 2px solid #2196f3; }
+
+.table-of-contents a:hover {
+  border-left: 1px solid #2196f3; }

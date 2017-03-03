@@ -12,13 +12,17 @@ This is the source code for [hyuwah.github.io](http://hyuwah.github.io)
 
 TODO: explain dependencies
 
-* NPM
+* Node.js & npm
+* Ruby, Rubygem & Bundler
 * Jekyll
+  * jekyll-paginate
+  * jekyll-feed
 * Gulp:
   * gulp-sass
   * gulp-autoprefixer
-  * browser-sync
   * gulp-jade
+  * browsersync
+  * child_process
 
 ## Usage
 * TODO: explain structure
