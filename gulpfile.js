@@ -90,7 +90,7 @@ gulp.task('jade', function() {
 gulp.task('watch', function() {
     gulp.watch(['assets/css/*.scss'], ['sass']);
     gulp.watch(['_jadefiles/blog/*.jade', '_jadefiles/layouts/*.jade', '_jadefiles/includes/*.jade', '_jadefiles/*.jade'], ['jade']);
-    gulp.watch(['_config.yml', '*.html', '_includes/*', '_layouts/*.html', '_posts/*', '_projects/*', '_timelines/*', 'blog/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['_config.yml', '*.html', '_includes/*', '_layouts/*.html', '_posts/*', '_projects/*', '_timelines/*', 'blog/*.html', 'assets/js/*.js'], ['jekyll-rebuild']);
 });
 //
 /**

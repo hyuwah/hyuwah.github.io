@@ -25,13 +25,21 @@ TODO: explain dependencies
   * child_process
 
 ## Usage
+
 * TODO: explain structure
 * TODO: explain projects/portfolio Usage
 * TODO: explain timelines Usage
 * TODO: explain gulp workflow (local development)
 * TODO: explain jade and scss Usage
 
+## Workaround Temporary
+
+NPM Install: gulp, gulp-cli, gulp-jade, gulp-autoprefixer, browsersync, gulp-sass, child_process  
+Ruby and Rubygems : update SSL  
+Gem install : jekyll, jekyll-feed, jekyll-paginate  
+
 ## Credits
+
 This site is based on Jekyll-Materialize theme by riefachan and some adaptation from [Samet Erpik](http://erpik.com) website.
 
 Main image used on this site provided by [Sai Kiran Anagani](https://stocksnap.io/author/21245).

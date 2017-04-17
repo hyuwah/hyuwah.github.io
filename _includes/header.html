@@ -1,4 +1,4 @@
-<div class="navbar-fixed"><nav id="navbar" class="white blue-text z-depth-0"><div class="container container-large"><a href="{{ site.baseurl }}/" class="brand-logo"><span class="light blue-text">{{ site.logo }}</span></a><!-- Nav menu large screen--><ul class="right hide-on-med-and-down">{% for page in site.pages %}
+<nav id="navbar" class="white blue-text z-depth-0"><div class="container container-large"><a href="{{ site.baseurl }}/" class="brand-logo"><span class="light blue-text">{{ site.logo }}</span></a><!-- Nav menu large screen--><ul class="right hide-on-med-and-down">{% for page in site.pages %}
 {% if page.title != null %}
 {% unless page.url contains '/blog/page/' %}<li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>        {% endunless %}
         {% endif %}
@@ -6,4 +6,4 @@
       {% if page.title != null %}
       {% unless page.url contains '/blog/page/' %}<li><a href="{{ page.url | prepend: site.baseurl }}" class="blue-text">{{ page.title }}</a></li>      {% endunless %}
       {% endif %}
-      {% endfor %}<!-- SKRIPSI BUTTON--><li><a href="http://hyuwah.github.io/Skripsi" class="blue-text">Skripsi<i style="vertical-alignment:middle;margin-left:8px" class="fa fa-flask fa-lg"></i></a></li><li><a href="http://feeds.feedburner.com/HyuwahGithubPage" target="_blank" class="blue-text">Feed<i style="vertical-alignment:middle;margin-left:8px" class="fa fa-feed fa-lg"></i></a></li></ul></nav></div>
+      {% endfor %}<!-- SKRIPSI BUTTON--><li><a href="http://hyuwah.github.io/Skripsi" class="blue-text">Skripsi<i style="vertical-alignment:middle;margin-left:8px" class="fa fa-flask fa-lg"></i></a></li><li><a href="http://feeds.feedburner.com/HyuwahGithubPage" target="_blank" class="blue-text">Feed<i style="vertical-alignment:middle;margin-left:8px" class="fa fa-feed fa-lg"></i></a></li></ul></nav>

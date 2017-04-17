@@ -1,13 +1,14 @@
 doctype html
 html
   | {% include head.html %}
-  body#main.m-scene
-    header.scene_element.scene_element--fadein
-      | {% include header.html %}
-    main.content.scene_element.scene_element--fadein
-      | {{ content }}
-    footer.page-footer.no-margin.__top.blue.scene_element.scene_element--fadein
-      | {% include footer.html %}
+  body
+    shell.m-scene#bungkus
+      header.scene_element.scene_element--fadein.navbar-fixed
+        | {% include header.html %}
+      main.content.scene_element.scene_element--fadein
+        | {{ content }}
+      footer.page-footer.no-margin.__top.blue.scene_element.scene_element--fadein
+        | {% include footer.html %}
     script(src='https://code.jquery.com/jquery-2.1.1.min.js')
     script.
       window.jQuery || document.write('<script src="{{ " /assets/js/vendor/jquery.js " | prepend: site.baseurl }}"><\\/script>')

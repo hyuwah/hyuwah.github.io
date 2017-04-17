@@ -189,7 +189,7 @@ header {
    }
    /* label focus color */
    .input-field textarea[type=text]:focus + label {
-     color: blue;
+     color: #2196f3;
    }
    /* label underline focus color */
    .input-field textarea[type=text]:focus {
@@ -207,4 +207,18 @@ header {
 }
 .table-of-contents a:hover {
     border-left: 1px solid #2196f3;
+}
+
+.highlight:before {
+  content:"Code\a0\bb";
+  padding: 1px 10px;
+  font-size: 11px;
+  margin-top: 10px
+}
+
+code {
+  padding: 1px 8px;
+  table {
+    width: 0;
+  }
 }
