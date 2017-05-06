@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "description": "Source code for hyuwah.github.io with full setup Jekyll, GulpJS, SASS & BrowserSync",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Muhammad Wahyudin",
   "license": "ISC",
   "devDependencies": {
