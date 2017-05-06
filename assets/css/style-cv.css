@@ -112,6 +112,29 @@ margin-top: 5px;
   content: "";
   top: 5px;
 }
+article.post-content li.event{
+	list-style-type:none;
+}
+article.post-content li h3{
+  font-weight: 300;
+}
+
+#tl-style.container-front {
+    width: 100%;
+}
+
+@media(min-width: 601px){
+  #tl-style.container-front {
+    width: 95%;
+}
+}
+
+@media(min-width: 993px){
+#tl-style.container-front {
+    width: 75%;
+}
+}
+
 
 
 /**/
@@ -171,12 +194,15 @@ Footer
 â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”*/
 ul.icons a
 {
-  color: #03A9F4;
+  /*color: #03A9F4;*/
+  color: #727272;
+  
   font-size: 20px;
 }
 ul.icons a:hover
 {
-  color: #727272;
+  /*color: #727272;*/
+  color: #039be5;
 }
 ul.icons span.label
 {
@@ -235,7 +261,7 @@ Responsive Stuff
 		box-shadow: none;
 	}
 	section.intro{
-		margin-top:-250px;
+		margin-top:-180px;
 	}
 	section.portfolio
 	{
@@ -377,20 +403,9 @@ img.dim {
  }
 
 /*
-Smart Garden
+app custom
 */
- #container {
-		 height: 100%;
-		 width: 100%;
-		 display: table;
- }
-
- #inner {
-		 vertical-align: middle;
-		 display: table-cell;
- }
-
- div.gauge_div {
-		 width: 400px;
-		 margin: 0 auto;
- }
+blockquote {
+        border-left: 5px solid #039be5;
+            font-family: monospace;
+}

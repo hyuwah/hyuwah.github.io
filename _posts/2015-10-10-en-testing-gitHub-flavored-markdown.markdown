@@ -12,12 +12,12 @@ For more information about GFM, [click here](https://help.github.com/articles/gi
 
 Example :
 
-[click here](https://github.com/riefachan).
+[click here](https://github.com/hyuwah).
 
 Return :
 
 ```
-[click here](https://github.com/riefachan)
+[click here](https://github.com/hyuwah)
 ```
 
 

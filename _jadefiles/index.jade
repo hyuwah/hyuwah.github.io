@@ -4,45 +4,36 @@
 | 
 
 // top parallax
-.parallax-container(style='background-color:rgba(0,0,0,0.2);z-index:-1;')
+#profile.scrollspy.parallax-container(style='background-color:rgba(0,0,0,0.2);z-index:-1;')
   .parallax
     img.dim(src='{{ site.mainimg.top }}', alt='top main image', style='display:block;')
   .header-top.center-align.container-front(style="margin-top:5%")
     div.hide-on-med-and-down(style="margin:-25px")
-      img.responsive-img.circle(src="assets/images/linkedinimager.jpg", width="96")
+      img.responsive-img.circle(src="assets/images/linkedinimager.webp", width="96")
     h1.white-text(style='font-weight:bold;') {{ site.owner.name }}
     h2.white-text {{ site.owner.taglines }}
 // top parallax
 section.intro
-  #about.container-front.section.scrollspy
+  .container-front.section
     .row.about-card
       .col.s12.l12.about-card-mobile
         .card.hoverable
           .card-content
             div.hide-on-large-only.center-align(style="margin:0px")
-              img.responsive-img.circle(src="assets/images/linkedinimage.jpg", width="96")
+              img.responsive-img.circle(src="assets/images/linkedinimage.webp", width="96")
             h3.blue-text.lighten-1 Introduction 
-            p.flow-text Hi, I'm Wahyu, fresh graduate with bachelor's degree in Physics from Universitas Padjadjaran. 
+            p.flow-text Hi, I'm Wahyu, fresh graduate with bachelor's degree in Physics from Universitas Padjadjaran. Full-time C# developer, part-time Web Developer.
 // Include Portfolio Items
 section.portfolio.blue.lighten-1
   .container-front.portfolio-container
-    #portfolio.row.scrollspy
-      .portfolio-header
+    .row
+      #portfolio.portfolio-header.scrollspy
         h3.white-text Portfolio
         p.flow-text.white-text
           | Some of my work
       // portfolio item
       div
         | {% include portfolio.html %}
-#timeline.section.scrollspy
-  // include timeline
-  section#timeline
-    #content.container-front
-      .row
-        .col.s12.m12.l12
-          h3.blue-text.lighten-1.left-align Timeline
-          ul.timeline
-            | {% include timeline.html %}
 // bottom parallax
 .parallax-container(style='height:250px;background-color:rgba(0,0,0,0.2);z-index:-1;')
   .parallax
@@ -51,18 +42,16 @@ section.portfolio.blue.lighten-1
 // TOC
 ul#sticky.card-panel.section.table-of-contents.hide-on-med-and-down(style='margin:100px 0 0 85%;z-index:98;')
   li
-    a#toc-1(href='#about',style='color:grey;') About
+    a#toc-1(href='#profile',style='color:grey;') Profile
   li
     a#toc-2(href='#portfolio', style='color:grey;') Portfolio
   li
-    a#toc-3(href='#timeline', style='color:grey;') Timeline
-  li
-    a#toc-4(href='#contact', style='color:grey;') Contact
-section#contact.section.scrollspy(style='padding-bottom:0;')
+    a#toc-3(href='#contact', style='color:grey;') Contact
+section.section(style='padding-bottom:0;')
   // contact form
   .container-front.fade-in(style='display: block; opacity: 1;')
     .section
-      .row
+      #contact.row.scrollspy
         h3.blue-text.lighten-1 Contact
         // Socmed Links
         .col.s12.m4

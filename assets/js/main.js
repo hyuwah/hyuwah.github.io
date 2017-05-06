@@ -10,6 +10,9 @@ $(document).ready(function () {
   paket();
 });
 
+$("html").easeScroll();
+
+
 // Contents of functions.js
 $(function () {
   // 'use strict';
@@ -91,7 +94,7 @@ var paket = function () {
     edge: 'right', // Choose the horizontal origin
   });
   $('.parallax').parallax();
-  $('.scrollspy').scrollSpy();
+  $('.scrollspy').scrollSpy({});
   $('#sticky').pushpin(); //{ top:0 });
   $('.carousel').carousel();
   $('.collapsible').collapsible({

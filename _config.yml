@@ -1,7 +1,7 @@
 # Site settings
 title: Muhammad Wahyudin's Page
 description: > # this means to ignore newlines until "baseurl:"
-  A website for showcasing Muhammad Wahyudin's creation.
+  A website to showcase the work of Muhammad Wahyudin.
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://hyuwah.github.io" # the base hostname & protocol for your site you most probably don't need to set it
 url: ""
@@ -10,15 +10,15 @@ url: ""
 logo: <img  src="/assets/favicon/favicon-96x96.png" width="24" style="vertical-align:middle;"> hyuwah<b>.github</b>.io
 #image used on frontpage parallax
 mainimg:
-  top: assets/images/mainparalax.jpg
-  bottom: assets/images/mainparalax.jpg
+  top: assets/images/pexels-photo.webp
+  bottom: assets/images/arduino.webp
 
 owner:
     name: "Muhammad Wahyudin"
     taglines: "Coding Lover - Instrumentation & Electronics Physicist - Technology Enthusiast"
     email: muhammad.whydn@gmail.com
     facebook:
-        show: true
+        show: false
         name: "Muhammad Wahyudin"
         url: "https://fb.me/hyuwah"
     github:
@@ -35,6 +35,9 @@ owner:
         show: false
         url: ""
     codepen:
+        show: true
+        username: "hyuwah"
+    gitlab:
         show: true
         username: "hyuwah"
     linkedin:
@@ -57,14 +60,19 @@ kramdown:
     # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: 'highlight'
     #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
-    
+
+cloudinary:
+  cloud_name: hyuwah-github-io
+  verbose: true
+
 sass:
     sass_dir: _sass
     style: compressed
-permalink: "/blog/:title/"
+permalink: "/blog/:year/:month/:title/"
 gems:
     - jekyll-paginate
     - jekyll-feed
+    - jekyll-cloudinary
 
 # Collections
 collections:

@@ -8,13 +8,19 @@
 					a.grey-text.text-lighten-3(target='_blank', href='https://github.com/{{ site.owner.github.username }}')
 						i.fa.fa-github.fa-lg.fa-fw
 						|   Github Profile
-				|           {% endif %}
-				|           {% if site.owner.codepen.show == true %}
-				li
+				| {% endif %}
+				| {% if site.owner.codepen.show == true %}
+				li(style='margin-bottom:5px;')
 					a.grey-text.text-lighten-3(target='_blank', href='http://codepen.io/{{ site.owner.codepen.username }}/')
 						i.fa.fa-codepen.fa-lg.fa-fw
 						|   Codepen
-				|           {% endif %}
+				| {% endif %}
+				| {% if site.owner.gitlab.show == true %}
+				li
+					a.grey-text.text-lighten-3(target="_blank", href='https://gitlab.com/{{ site.owner.gitlab.username }}')
+						i.fa.fa-gitlab.fa-lg.fa-fw
+						|   Gitlab
+				| {% endif %}
 		.col.l6.offset-l2.s12.right-align
 			h5.white-text {{ site.logo }}
 			p.grey-text.text-lighten-4 {{ site.description }}
@@ -24,7 +30,6 @@
 .footer-copyright.valign-wrapper
 	.container.center-align
 		p(style='line-height:1.5;')
-			| Hyuwah © {{ site.time | date: '%Y' }} | Build with 
+			| Hyuwah © {{ site.time | date: '%Y' }} | Made with 
 			i.fa.fa-heartbeat
-			|  and 
-			a.white-text(href='https://github.com/riefachan/jekyll-materialize') jekyll-materialize
+			|  in Paris Van Java
