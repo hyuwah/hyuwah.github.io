@@ -4,15 +4,13 @@ machine:
 
 dependencies:
   post:
-    - gem install bundler
-    - bundle exec jekyll build
+    - gem install jekyll
+    - gem install jekyll-paginate
+    - gem install jekyll-feed
+    - gem install html-proofer
+
 
 test:
   post:
-    - bundle exec htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
-
-deployment:
-  prod:
-    branch: master
-    commands:
-      - rsync -va --delete ./_site hyuwah@hyuwah.github.io:/var/html
+    - gulp
+    - htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
