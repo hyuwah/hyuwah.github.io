@@ -72,7 +72,6 @@ permalink: "/blog/:year/:month/:title/"
 gems:
     - jekyll-paginate
     - jekyll-feed
-    - jekyll-cloudinary
 
 # Collections
 collections:
