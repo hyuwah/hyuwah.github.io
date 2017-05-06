@@ -98,4 +98,4 @@ gulp.task('watch', function() {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 // gulp.task('default', ['browser-sync', 'watch']); // for local development
-gulp.task('default', ['browser-sync']); // for production (Prevent CircleCI endless loop watching files)
+gulp.task('default', ['sass','jade','jekyll-build']); // for production only (Only build, Prevent CircleCI endless loop watching files)
