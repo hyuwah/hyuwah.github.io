@@ -11326,12 +11326,15 @@ header {
   border-left: 1px solid #2196f3; }
 
 .highlight:before {
-  content: "Code\a0\bb";
+  content: "Code » " attr(data-lang);
   padding: 1px 10px;
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 10px; }
 
 code {
   padding: 1px 8px; }
   code table {
     width: 0; }
+
+figure.highlight {
+  margin: 1em 0px; }

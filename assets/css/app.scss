@@ -210,9 +210,10 @@ header {
 }
 
 .highlight:before {
-  content:"Code\a0\bb";
+  content:"Code\a0\bb\a0" attr(data-lang) ;
+  // content:"Code\a0\bb";
   padding: 1px 10px;
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 10px
 }
 
@@ -221,4 +222,8 @@ code {
   table {
     width: 0;
   }
+}
+
+figure.highlight{
+  margin: 1em 0px;
 }

@@ -97,5 +97,9 @@ gulp.task('watch', function() {
  * Default task, running just `gulp` will compile the sass, jade
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-// gulp.task('default', ['browser-sync', 'watch']); // for local development
-gulp.task('default', ['sass','jade','jekyll-build']); // for production only (Only build, Prevent CircleCI endless loop watching files)
+
+// for local development
+gulp.task('default', ['browser-sync', 'watch']);
+
+// for production only (Only build, Prevent CircleCI endless loop watching files)
+//gulp.task('default', ['sass','jade','jekyll-build']); 

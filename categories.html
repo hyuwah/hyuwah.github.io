@@ -17,7 +17,12 @@ permalink: /archives/
 
         <ul style="margin:12px 20px">
           {% for post in site.posts %}
-          <li style="margin-bottom:8px;"><div class="chip">{{ post.date | date: "%-d %B %Y" }}</div>
+          <li style="margin-bottom:8px;">
+            <div class="chip">{% if post.language == 'id' %}
+            <img src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" style="vertical-align: middle;">
+            {% elsif post.language == 'en' %} 
+            <img src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language" style="vertical-align: middle;">
+            {% endif %} {{ post.date | date: "%-d %B %Y" }}</div>
             <a href="{{ post.url }}">
               {{ post.title }}
             </a>
@@ -41,7 +46,13 @@ permalink: /archives/
 
         <ul style="margin:12px 20px">
           {% for posts in category %} {% for post in posts %} {% if post.url %}
-          <li style="margin-bottom:8px"><div class="chip">{{ post.date | date: "%-d %B %Y" }}</div>
+          <li style="margin-bottom:8px">
+           
+            <div class="chip"> {% if post.language == 'id' %}
+            <img src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" style="vertical-align: middle;">
+            {% elsif post.language == 'en' %} 
+            <img src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language" style="vertical-align: middle;">
+            {% endif %} {{ post.date | date: "%-d %B %Y" }}</div>
             <a href="{{ post.url }}">
               {{ post.title }}
             </a>

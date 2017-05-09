@@ -10,11 +10,22 @@
           .card-content
             .card-title.center-align
               h2.thin.blue-text {{ page.title }}
-            h5.center-align.grey-text.text-darken-1.thin Published at {{ page.date | date: "%B %-d, %Y" }}
+            h5.center-align.grey-text.text-darken-1.thin 
+              | Published at {{ page.date | date: "%B %-d, %Y" }}
             br
             .divider
+            br
+            .center-align
+              .chip.center-align
+                | {% if page.language == 'id' %} 
+                img.center-align(src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" ) 
+                |  Bahasa
+                | {% elsif page.language == 'en' %} 
+                img(src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language") 
+                |  English
+                | {% endif %}
             article.post-categories.center-align
-              .chip.teal.white-text Categories
+              .chip.green.white-text Categories
               |                     {% for cat in page.categories %}
               .chip {{ cat }}
               |  {% endfor %}

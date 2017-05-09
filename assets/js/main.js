@@ -8,7 +8,53 @@
 
 $(document).ready(function () {
   paket();
+  $('.highlight').each(function () {
+    var codelang = this.lastChild.firstChild.getAttribute('data-lang').toUpperCase();
+    $(this).attr('data-lang', codelang);
+  });
+
+  $('.highlight').each(function () {
+    var btn = document.createElement('button');
+    btn.setAttribute('type', 'button');
+    // for Firefox
+    btn.setAttribute('onclick', 'selectElementContents(this.nextSibling);');
+    // for IE
+    btn.onclick = function () {
+      selectElementContents(this.nextSibling)
+    };
+
+    btn.setAttribute('style', 'float: right; font-size: 0.8em; margin-right: -40px; background: #fff; border:0;');
+
+    btn.innerHTML = '<i class="fa fa-clipboard tooltipped" data-position="bottom" data-delay="50" data-tooltip="Copy code"></i>';
+    this.insertBefore(btn, this.firstChild);
+  });
+  $('.tooltipped').tooltip({
+    delay: 50
+  });
 });
+
+// Copy to clipboard code highlight
+// http://stackoverflow.com/a/8024509/1848454
+function selectElementContents(el) {
+  if (window.getSelection && document.createRange) {
+    // IE 9 and non-IE
+    var range = document.createRange();
+    range.selectNodeContents(el.firstChild.firstChild.firstChild.firstChild.lastChild);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    sel.removeAllRanges();
+    Materialize.toast('Copied to clipboard', 3000)
+  } else if (document.body.createTextRange) {
+    // IE < 9
+    var textRange = document.body.createTextRange();
+    textRange.moveToElementText(el.firstChild.firstChild.firstChild.firstChild.lastChild);
+    textRange.select();
+    document.execCommand('copy');
+    Materialize.toast('Copied to clipboard', 3000)
+  }
+}
 
 $("html").easeScroll();
 
@@ -47,7 +93,7 @@ $(function () {
   //       }
   //     },
   'use strict';
-    var $body = $('html, body'),
+  var $body = $('html, body'),
     content = $('#bungkus').smoothState({
       debug: true,
       prefetch: true,
@@ -59,7 +105,7 @@ $(function () {
           $container.addClass('is-exiting');
           // Restart your animation
           content.restartCSSAnimations();
-         
+
         }
       },
 
@@ -67,7 +113,7 @@ $(function () {
         duration: 250,
         render: function ($container, $newContent) {
           // Remove your CSS animation reversing class
-          
+
           $container.removeClass('is-exiting');
           // Inject the new content
           $container.html($newContent);
@@ -77,7 +123,7 @@ $(function () {
             scrollTop: 0
           });
         }
-         
+
       },
 
       // runs when the new content has been injected into the page and all animations are complete
@@ -94,6 +140,7 @@ var paket = function () {
     edge: 'right', // Choose the horizontal origin
   });
   $('.parallax').parallax();
+  $('.materialboxed').materialbox();
   $('.scrollspy').scrollSpy({});
   $('#sticky').pushpin(); //{ top:0 });
   $('.carousel').carousel();

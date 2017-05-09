@@ -1,5 +1,7 @@
 # hyuwah.github.io
 
+[![CircleCI](https://circleci.com/gh/hyuwah/hyuwah.github.io.svg?style=svg)](https://circleci.com/gh/hyuwah/hyuwah.github.io)
+
 This is the source code for [hyuwah.github.io](http://hyuwah.github.io)
 
 ## Tech Used
@@ -37,6 +39,23 @@ TODO: explain dependencies
 NPM Install: gulp, gulp-cli, gulp-jade, gulp-autoprefixer, browsersync, gulp-sass, child_process  
 Ruby and Rubygems : update SSL  
 Gem install : jekyll, jekyll-feed, jekyll-paginate  
+
+On local development :
+modify gulp default task on `gulpfile.js` to 
+```javascript
+// for local development
+gulp.task('default', ['browser-sync', 'watch']); 
+// for production only (Only build, Prevent CircleCI endless loop watching files)
+// gulp.task('default', ['sass','jade','jekyll-build']); 
+```
+When pushing to remote :
+modify default task on `gulpfile.js` to
+```javascript
+// for local development
+//gulp.task('default', ['browser-sync', 'watch']); 
+// for production only (Only build, Prevent CircleCI endless loop watching files)
+gulp.task('default', ['sass','jade','jekyll-build']); 
+```
 
 ## Credits
 

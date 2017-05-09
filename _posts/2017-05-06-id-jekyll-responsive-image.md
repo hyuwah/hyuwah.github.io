@@ -2,7 +2,8 @@
 layout: post
 title: "jekyll responsive image"
 date: 2017-05-06
-category: Web Development
+categories: [Web Development]
+language: id
 ---
 
 

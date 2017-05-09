@@ -17,9 +17,25 @@
             h4.blue-text.thin
               i.fa.fa-pencil-square-o
               |  {{ post.title }}
-            p.grey-text.text-darken-1.light Published at {{ post.date | date: "%B %-d, %Y" }}.
+            p.grey-text.text-darken-1.light 
+              | Published at {{ post.date | date: "%B %-d, %Y" }}. 
             article.grey-text.text-darken-2.post-content.on-index.light
               | {{ post.excerpt | strip_html }}. .
+            br
+            .right-align
+              .chip
+                | {% if post.language == 'id' %} 
+                img.center-align(src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" ) 
+                |  Bahasa
+                | {% elsif post.language == 'en' %} 
+                img(src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language" ) 
+                |  English
+                | {% endif %}
+              | {% for cat in post.categories %} 
+              .chip {{ cat }} 
+              | {% else %}
+              .chip Uncategorized 
+              | {% endfor %}
             br
           .divider
     |         {% endfor %}
