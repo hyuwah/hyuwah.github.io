@@ -101,5 +101,5 @@ gulp.task('watch', function() {
 // for local development
 gulp.task('default', ['browser-sync', 'watch']);
 
-// for production only (Only build, Prevent CircleCI endless loop watching files)
-//gulp.task('default', ['sass','jade','jekyll-build']); 
+// for deploying (Only build, Prevent CircleCI endless loop watching files)
+gulp.task('deploy', ['sass','jade','jekyll-build']); 
