@@ -103,19 +103,29 @@ nav .brand-logo {
 }
 article {
     padding: 10px;
-    font-size: 1.35rem;
+    font-size: 14pt;
     line-height: 1.7;
     font-weight: 300;
     &.post-content {
       ul {
           margin-left: 20px;
+          li{
+            margin-left:1em;
+            list-style-type: disc;
+          }
+      }
+      ul.collapsible {
+          margin-left: 20px;
+          li{
+            list-style-type: none;
+          }
       }
       h1, h2, h3, h4, h5, h6 {
           font-weight: 200;
       }
-      li {
-        list-style-type: disc;
-      }
+      // li {
+      //   list-style-type: disc;
+      // }
       &.on-index {
         padding:0;
         font-size: 17px;

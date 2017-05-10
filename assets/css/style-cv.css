@@ -164,12 +164,12 @@ Portfolio Styles
 }
 
 section.intro {
-  margin-top: -275px;
+  margin-top: -245px;
 }
 
 section.portfolio {
   padding: 10px;
-  margin-top: -200px;
+  margin-top: -146px;
 }
 
 section.portfolio h3 {
@@ -204,7 +204,7 @@ h2.card-title-top {
 .card-content p {
   line-height: inherit;
   color: #727272;
-  font-size: 14px;
+  font-size: 14pt;
   margin-top: 10px;
 }
 
@@ -272,10 +272,10 @@ Responsive Stuff
     box-shadow: none;
   }
   section.intro {
-    margin-top: -180px;
+    margin-top: -240px;
   }
   section.portfolio {
-    margin-top: 0;
+    padding-top: 150px;
   }
   section.portfolio h3 {
     margin-top: 0;
@@ -285,15 +285,15 @@ Responsive Stuff
   }
   .timeline .event::before {
     left: 0.5px;
-    top: 20px;
+    top: 30px;
     min-width: 0;
     font-size: 13px;
   }
-  .timeline .event:nth-child(1)::before,
+  /*.timeline .event:nth-child(1)::before,
   .timeline .event:nth-child(3)::before,
   .timeline .event:nth-child(5)::before {
     top: 38px;
-  }
+  }*/
   .timeline h3 {
     font-size: 16px;
   }
