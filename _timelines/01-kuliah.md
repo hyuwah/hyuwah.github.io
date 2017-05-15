@@ -1,5 +1,5 @@
 ---
-title: "Fisika Universitas Padjadjaran"
+title: "Physics Major, Universitas Padjadjaran"
 year: "2012"
 ---
-Tahun 2012, saya memasuki dunia perkuliahan di program studi fisika.
+I started college majoring physics at Universitas Padjadjaran, Bandung.

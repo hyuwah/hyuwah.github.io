@@ -7,15 +7,15 @@ language: id
 ---
 
 Mau liat js dari web buat analisa, eh isinya beginian :
-{% include image.html url='http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494395181/hyuwah.github.io/blog/BSVmJ0D.png' desc='Obfuscated javascript'%}
+{% include image.html url='http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494395181/hyuwah.github.io/blog/BSVmJ0D.png' desc='Obfuscated javascript' id="1" %}
 
 Pertama di deobfuscate pake [malzilla](http://malzilla.sourceforge.net/)
 
-{% include image.html url='http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494391301/hyuwah.github.io/blog/dojs1.png' desc='step 1 - malzilla' %}
+{% include image.html url='http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494391301/hyuwah.github.io/blog/dojs1.png' desc='step 1 - malzilla' id="2" %}
 
 Kedua di beautify pake [jsnice](http://jsnice.org/) (atau tools js beautifier favorit kamu)
 
-{% include image.html url='http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494391476/hyuwah.github.io/blog/at4ZZdu.png' desc='step 2 - js beautifier' %}
+{% include image.html url='http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494391476/hyuwah.github.io/blog/at4ZZdu.png' desc='step 2 - js beautifier' id="3" %}
 
 Hasilnya :
 

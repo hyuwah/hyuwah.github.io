@@ -67,10 +67,10 @@ Jadi begini,
 
 Contoh jadi nya:
 
-{% include image.html url="http://www.lilbub.com/uploads/images/about5.jpg" desc="Contoh responsive" %}   
+{% include image.html url="http://www.lilbub.com/uploads/images/about5.jpg" desc="Contoh responsive" id="1" %}   
    
    
    **Perbandingannya :**
-{% include image.html url="http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494327650/hyuwah.github.io/blog/ResponsiveImageJekyll-Before-After.png" desc="Perbandingan before - after" %}
+{% include image.html url="http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494327650/hyuwah.github.io/blog/ResponsiveImageJekyll-Before-After.png" desc="Perbandingan before - after" id="2" %}
 
 Referensi: [EricToulson](http://erictoulson.com/2014/01/21/responsive-images-with-jekyll/), [LilBub](http://www.lilbub.com/)

@@ -2,4 +2,4 @@
 title: "PIMNAS 27: GULALI"
 year: "2014"
 ---
-Tahun 2014, saya mengikuti program kreativitas mahasiswa yang diadakan oleh DIKTI melalui karsa cipta GULALI (Gantungan Anti Lali) dan berhasil dipresentasikan secara nasional di Pekan Ilmiah Mahasiswa Nasional ke-27 yang bertempat di Universitas Diponegoro.
+I participated in a student creativity program (PKM) organized by DIKTI through _Karsa Cipta GULALI (Gantungan Anti Lali)_ and successfully presented nationally in 27th National Student Scientific Week (PIMNAS) at Universitas Diponegoro, Semarang.
