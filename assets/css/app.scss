@@ -6,6 +6,7 @@
 @import "assets/css/_sass/materialize";
 @import "assets/css/_sass/fontawesome";
 @import "assets/css/_sass/pygments";
+@import "assets/css/_sass/pygments_monokai";
 
 
 body {
@@ -235,6 +236,20 @@ code {
 
 figure.highlight{
   margin: 1em 0px;
+}
+
+.highlight pre{
+  font-size: 12pt;
+  line-height: 18px;
+  padding: 2px 4px;
+  margin-bottom: 2px;
+  // white-space: pre-wrap;
+
+}
+
+// plain highlight text color 
+.highlight code{
+  color:#ccc;
 }
 
 /** LIGHTBOX Perfundo **/

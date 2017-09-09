@@ -4,7 +4,7 @@ description: > # this means to ignore newlines until "baseurl:"
   A website to showcase the work of Muhammad Wahyudin.
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://hyuwah.github.io" # the base hostname & protocol for your site you most probably don't need to set it
-url: ""
+url: "http://hyuwah.github.io"
 
 # Site Variables
 logo: <img  src="/assets/favicon/favicon-96x96.png" width="24" style="vertical-align:middle;"> hyuwah<b>.github</b>.io

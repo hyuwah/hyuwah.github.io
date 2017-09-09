@@ -83,7 +83,7 @@ section.section(style='padding-bottom:0;')
                 |   Email
         // Form contact
         .col.s12.m8.grey-text.text-darken-3
-          form#contactForm(action='//formspree.io/{{ site.owner.email }}', method='post')
+          form#contactForm(action='https://formspree.io/{{ site.owner.email }}', method='POST')
             .input-field
               input(type='text', name='name', maxlength='50', required='')
               label(for='name')
@@ -102,7 +102,7 @@ section.section(style='padding-bottom:0;')
             .row
               .col.s12
                 #contactdivT
-                  button#buttonForm.waves-effect.waves-light.red.accent-2.btn.right(type='submit')
+                  button#buttonForm.waves-effect.waves-light.red.accent-2.btn.right(type='submit', value='Send')
                     | Send 
                     i.mdi-content-send.right
                   p#messageP.red-text.accent-2
