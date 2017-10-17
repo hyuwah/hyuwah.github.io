@@ -3,11 +3,10 @@ layout: page
 title: About Me
 permalink: /aboutme/
 ---
-## Loading
+## Under development
 <div class="progress">
     <div class="indeterminate"></div>
 </div>
-Under development ..
 
 <div>
     <section id="timeline">

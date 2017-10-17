@@ -1,5 +1,5 @@
 ---
-title: "Work @ TBN"
+title: "Work @ Tigaresi Bangun Nusaperdana"
 year: "2017"
 ---
-Shortly after graduation, I work at TBN as a software developer. Focusing on the development of New Gantry System that is applied on Pertamina's BBM Terminal across Indonesia.
+Shortly after graduation, I work at TBN (Tigaresi Bangun Nusaperdana) as a software developer. A system integrator company, focusing on the development of _New Gantry System_ (Terminal Automation System) that is applied on Pertamina's BBM Terminal across Indonesia.
