@@ -4,7 +4,12 @@ title: "Responsive image di Jekyll Post"
 date: 2017-05-06
 categories: [Web Development]
 language: id
+excerpt_separator: <!--more-->
+frontimage: https://www.letsnurture.com/wp-content/uploads/2013/07/responsive-website-design.png
 ---
+
+Cat can snug into its container like fluid, image in jekyll can too!  
+<!--more-->
 
 Normalnya, pasang gambar di jekyll dilakukan dengan cara ini :
 

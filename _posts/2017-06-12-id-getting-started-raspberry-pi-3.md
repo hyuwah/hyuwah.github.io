@@ -4,11 +4,12 @@ title:  "Getting started with Raspberry Pi 3"
 date:   2017-06-12
 categories: [IoT, Raspberry Pi]
 language: id
+excerpt_separator: <!--more-->
+frontimage: https://http2.mlstatic.com/raspberry-pi3-pi-3-model-b-quadcore-12ghz-pronta-entrega-D_NQ_NP_100215-MLB25150209828_112016-F.jpg
 ---
 
-## Intro
-
 Instalasi sistem operasi Raspbian Jessie headless.
+<!--more-->
 
 
 ### Bahan - bahan

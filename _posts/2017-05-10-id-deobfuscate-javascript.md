@@ -4,9 +4,14 @@ title:  "Deobfuscate obfuscated javascript"
 date:   2017-05-10 02:39:00
 categories: [Web Development]
 language: id
+excerpt_separator: <!--more-->
+frontimage: http://www.malzilla.org/images/bg-header-table.png
 ---
 
-Mau liat js dari web buat analisa, eh isinya beginian :
+Confused no more with malzilla and beautify!
+<!--more-->
+
+Mau liat js dari web buat analisa, tapi isinya beginian?
 {% include image.html url='http://res.cloudinary.com/hyuwah-github-io/image/upload/v1494395181/hyuwah.github.io/blog/BSVmJ0D.png' desc='Obfuscated javascript' id="1" %}
 
 Pertama di deobfuscate pake [malzilla](http://malzilla.sourceforge.net/)

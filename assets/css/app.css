@@ -11750,3 +11750,6 @@ Image responsive blog
   height: auto;
   display: block;
   margin: auto; }
+
+#bloglink:hover h4 {
+  color: #e91e63 !important; }

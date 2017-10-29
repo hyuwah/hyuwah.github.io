@@ -4,13 +4,13 @@ title:  "Decompile aplikasi .NET dan cara proteksinya"
 date:   2017-05-30
 categories: [C#, Windows]
 language: id
+excerpt_separator: <!--more-->
+frontimage: https://chocolatey.org/content/packageimages/ilspy.2.4.0.1963.png
 ---
-
-## Intro
-
 
 ILSpy, decompile .net exe/assemblies
 http://ilspy.net/
+<!--more-->
 
 {% include image.html url="http://res.cloudinary.com/hyuwah-github-io/image/upload/v1496130238/hyuwah.github.io/blog/XyH3vBR.png" desc="Contoh aplikasi yang didecompile dengan ILSpy" id="7" %}   
 

@@ -4,9 +4,12 @@ title:  "Yarn Package Manager"
 date:   2017-05-12
 categories: [Web Development]
 language: id
+excerpt_separator: <!--more-->
+frontimage: https://image.slidesharecdn.com/slides-old-161215082736/95/yarn-package-management-49-638.jpg?cb=1481791171
 ---
 
-## Intro
+Fast, reliable, and secure dependency management.
+ <!--more-->
 
 ## Install yarn
 

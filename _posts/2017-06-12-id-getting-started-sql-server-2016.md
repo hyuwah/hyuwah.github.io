@@ -4,12 +4,13 @@ title:  "Getting started with SQL Server 2016"
 date:   2017-06-17
 categories: [Windows, .Net Development]
 language: id
+excerpt_separator: <!--more-->
+frontimage: https://www.starwindsoftware.com/blog/wp-content/uploads/2016/10/117.png
+
 ---
 
-## Intro
-
 Instalasi SQL Server 2016
-
+<!--more-->
 
 ### Bahan - bahan
 

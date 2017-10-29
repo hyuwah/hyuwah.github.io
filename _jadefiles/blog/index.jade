@@ -11,16 +11,21 @@
         .divider
     |         {% for post in paginator.posts %}
     .row.no-margin
-      a.waves-effect(href='{{ post.url | prepend: site.baseurl }}' style="width:100%")
         .col.s12
-          .list-article
-            h4.blue-text.thin
-              i.fa.fa-pencil-square-o
-              |  {{ post.title }}
+          .list-article(style="padding:2px")
+            a#bloglink(href='{{ post.url | prepend: site.baseurl }}' style="width:100%")
+              h4.blue-text.thin
+                i.fa.fa-pencil-square-o
+                |  {{ post.title }}
             p.grey-text.text-darken-1.light 
               | Published at {{ post.date | date: "%B %-d, %Y" }}. 
             article.grey-text.text-darken-2.post-content.on-index.light
-              | {{ post.excerpt | strip_html }}. .
+              //- | {% if post.frontimage And post.frontimage != "" And post.frontimage != nil  %}{% include image.html url='post.frontimage' description='desc' id="" %} {%endif%}
+              .row
+                .col.s12.m4.l2
+                  | {% if post.frontimage And post.frontimage != "" And post.frontimage != nil  %} <img src="{{post.frontimage}}"style="width:100%"/> {%endif%}
+                .col.s12.m8.l10
+                  | {{ post.excerpt }}...
             br
             .right-align
               .chip
