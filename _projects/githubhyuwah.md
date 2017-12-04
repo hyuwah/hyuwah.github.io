@@ -2,7 +2,7 @@
 title: "hyuwah.github.io"
 imgurl: "../assets/images/hyuwah.github.io.webp"
 link: "http://github.com/hyuwah/hyuwah.github.io"
-category: "Website"
+category: "This Website"
 ---
 Deskripsi on progress..
 <div class="progress">

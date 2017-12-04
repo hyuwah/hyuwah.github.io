@@ -83,22 +83,22 @@ section.section(style='padding-bottom:0;')
                 |   Email
         // Form contact
         .col.s12.m8.grey-text.text-darken-3
-          form#contactForm(action='https://formspree.io/{{ site.owner.email }}', method='POST')
+          form#contactForm.no-smoothState(action="https://formspree.io/{{ site.owner.email }}", method="POST", accept-charset="UTF-8")
             .input-field
-              input(type='text', name='name', maxlength='50', required='')
+              input#formName(type='text', name='name', maxlength='50', required='')
               label(for='name')
                 | Name
             .input-field
-              input.validate(type='email', name='_replyto', required='')
+              input#formEmail.validate(type='email', name='email', required='')
               label(for='email')
                 | Email *
             .input-field
-              textarea.materialize-textarea.validate(type='text', name='message', rows='5', length='1000', maxlength='1000')
+              textarea#formMessage.materialize-textarea.validate(type='text', name='message', rows='5', length='1000', maxlength='1000')
               label(for='message')
                 | Message *
-              input(type='hidden', name='_subject', value='New submission from hyuwah.github.io')
-              input(type='hidden', name='_next', value='http://hyuwah.github.io/thanks.html')
-              input(type='text', name='_gotcha', style='display:none')
+              input#formSubject(type='hidden', name='_subject', value='New submission from hyuwah.github.io')
+              input#formNext(type='hidden', name='_next', value='http://hyuwah.github.io/thanks')
+              input#formHoneypot(type='text', name='_gotcha', style='display:none')
             .row
               .col.s12
                 #contactdivT

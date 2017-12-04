@@ -34,29 +34,6 @@ TODO: explain dependencies
 * TODO: explain gulp workflow (local development)
 * TODO: explain jade and scss Usage
 
-## Workaround Temporary
-
-NPM Install: gulp, gulp-cli, gulp-jade, gulp-autoprefixer, browsersync, gulp-sass, child_process  
-Ruby and Rubygems : update SSL  
-Gem install : jekyll, jekyll-feed, jekyll-paginate  
-
-On local development :
-modify gulp default task on `gulpfile.js` to 
-```javascript
-// for local development
-gulp.task('default', ['browser-sync', 'watch']); 
-// for production only (Only build, Prevent CircleCI endless loop watching files)
-// gulp.task('default', ['sass','jade','jekyll-build']); 
-```
-When pushing to remote :
-modify default task on `gulpfile.js` to
-```javascript
-// for local development
-//gulp.task('default', ['browser-sync', 'watch']); 
-// for production only (Only build, Prevent CircleCI endless loop watching files)
-gulp.task('default', ['sass','jade','jekyll-build']); 
-```
-
 ## Credits
 
 This site is based on Jekyll-Materialize theme by riefachan and some adaptation from [Samet Erpik](http://erpik.com) website.

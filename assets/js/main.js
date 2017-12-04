@@ -98,6 +98,7 @@ $(function () {
       debug: true,
       prefetch: true,
       cacheLength: 2,
+      blacklist: '.no-smoothState', 
       onStart: {
         duration: 1000, // Duration of our animation
         render: function ($container) {
@@ -105,6 +106,7 @@ $(function () {
           $container.addClass('is-exiting');
           // Restart your animation
           content.restartCSSAnimations();
+          
 
         }
       },
