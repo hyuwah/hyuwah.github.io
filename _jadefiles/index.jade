@@ -4,13 +4,13 @@
 | 
 
 // top parallax
-#profile.scrollspy.parallax-container(style='background-color:rgba(0,0,0,0.2);z-index:-1;')
+#profile.scrollspy.parallax-container(style='height:75vh;background-color:rgba(0,0,0,0.2);z-index:-1;')
   .parallax
     img.dim(src='{{ site.mainimg.top }}', alt='top main image', style='display:block;')
-  .header-top.center-align.container-front(style="margin-top:5%")
-    div.hide-on-med-and-down(style="margin:-25px")
+  .header-top.center-align.container-front(style="margin-top:15vh")
+    div.hide-on-med-and-down(style="margin:-25px;margin-bottom:16px")
       img.responsive-img.circle(src="assets/images/pp-square.webp", width="96")
-    h1.white-text(style='font-weight:bold;') {{ site.owner.name }}
+    h1.white-text(style='font-weight:300;') {{ site.owner.name }}
     h2.white-text {{ site.owner.taglines }}
 // top parallax
 section.intro
@@ -21,21 +21,22 @@ section.intro
           .card-content
             div.hide-on-large-only.center-align(style="margin:0px")
               img.responsive-img.circle(src="assets/images/pp-square.webp", width="96")
-            h3.blue-text.lighten-1 Introduction 
-            p.flow-text Hi, I'm Wahyu, fresh graduate with bachelor's degree in Physics from Universitas Padjadjaran. Full-time C# developer, part-time Web Developer.
+            h3.blue-text.lighten-1 Hello there!
+            p.flow-text I'm Wahyu, fresh graduate with bachelor's degree in Physics from Universitas Padjadjaran. Full-time C# developer, part-time Web Developer.
 // Include Portfolio Items
 section.portfolio.blue.lighten-1
   .container-front.portfolio-container
     #portfolio.row.scrollspy
       .portfolio-header
-        h3.white-text Portfolio
+        // Ganti jadi kreasi / karya
+        h3.white-text Projects
         p.flow-text.white-text
-          | Highlighted work
+          | Highlighted projects
       // portfolio item
       div
         | {% include portfolio.html %}
 // bottom parallax
-.parallax-container(style='height:250px;background-color:rgba(0,0,0,0.2);z-index:-1;')
+.parallax-container(style='height:40vh;background-color:rgba(0,0,0,0.2);z-index:-1;')
   .parallax
     img.dim(src='{{ site.mainimg.bottom }}', alt='bottom main image', style='display:block;')
 // bottom parallax
@@ -44,7 +45,7 @@ ul#sticky.card-panel.section.table-of-contents.hide-on-med-and-down(style='margi
   li
     a#toc-1(href='#profile',style='color:grey;') Profile
   li
-    a#toc-2(href='#portfolio', style='color:grey;') Portfolio
+    a#toc-2(href='#portfolio', style='color:grey;') Projects
   li
     a#toc-3(href='#contact', style='color:grey;') Contact
 section.section(style='padding-bottom:0;')
@@ -53,11 +54,11 @@ section.section(style='padding-bottom:0;')
     .section
       #contact.row.scrollspy
         h3.blue-text.lighten-1 Contact
-        // Socmed Links
+        // Contact Links
         .col.s12.m4
           p
             | If you'd like to discuss something or just want to say hi, feel free 
-            | to contact me via social medias below or this form. :)
+            | to contact me via links below or this form. :)
           ul.icons
             | {% if site.owner.linkedin.show == true %}
             li
@@ -71,12 +72,12 @@ section.section(style='padding-bottom:0;')
                 i.fa.fa-facebook-square.fa-lg.fa-fw(style='vertical-align:middle;')
                 |   Facebook
             |             {% endif %}
-            |             {% if site.owner.twitter.show == true %}
-            li
-              a(target='_blank', href='https://twitter.com/{{ site.owner.twitter.username }}')
-                i.fa.fa-twitter.fa-lg.fa-fw(style='vertical-align:middle;')
-                |   Twitter
-            |             {% endif %}
+            //- |             {% if site.owner.twitter.show == true %}
+            //- li
+            //-   a(target='_blank', href='https://twitter.com/{{ site.owner.twitter.username }}')
+            //-     i.fa.fa-twitter.fa-lg.fa-fw(style='vertical-align:middle;')
+            //-     |   Twitter
+            //- |             {% endif %}
             li
               a(target='_blank', href='mailto:{{ site.owner.email }}')
                 i.fa.fa-send.fa-lg.fa-fw(style='vertical-align:middle;')

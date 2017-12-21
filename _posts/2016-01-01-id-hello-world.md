@@ -12,4 +12,28 @@ Hello World!
 
 Halo Dunia!
 
-Kali ini _powered by_ [Jekyll](https://jekyllrb.com/).
+```C
+printf("Hello World!");
+```
+
+```python
+print "Hello World!"
+```
+
+```cs
+Console.WriteLine("Hello World!");
+```
+
+```js
+Console.log("Hello World!");
+```
+
+```bash
+echo "Hello World!"
+```
+
+```java
+System.out.println("Hello World!");
+```
+
+_Powered by_ [Jekyll](https://jekyllrb.com/).

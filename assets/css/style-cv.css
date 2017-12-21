@@ -151,6 +151,10 @@ article.post-content li h3 {
   }
 }
 
+ul.skillset > li {
+  list-style-type: none !important; 
+}
+
 
 /**/
 
@@ -272,7 +276,7 @@ Responsive Stuff
     box-shadow: none;
   }
   section.intro {
-    margin-top: -240px;
+    margin-top: -150px;
   }
   section.portfolio {
     padding-top: 150px;
@@ -285,7 +289,7 @@ Responsive Stuff
   }
   .timeline .event::before {
     left: 0.5px;
-    top: 30px;
+    top: -20px;
     min-width: 0;
     font-size: 13px;
   }

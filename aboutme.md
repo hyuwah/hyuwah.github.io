@@ -3,11 +3,51 @@ layout: page
 title: About Me
 permalink: /aboutme/
 ---
-## Under development
-<div class="progress">
-    <div class="indeterminate"></div>
+<h3 class="red-text lighten-1 center-align"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Under development <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></h3>
+<div class="progress red lighten-4">
+    <div class="indeterminate red"></div>
 </div>
-
+<div>
+    <section id="skillset">
+            <div class="row">
+                <div class="col s12 m12 l12" style="padding:0">
+                    <h3 class="blue-text lighten-1 center-align">Skillsets</h3>
+                    <div class="row center-align">
+                        <div class="col s12 m6 l4">
+                            <h5>Day-to-day familiarity</h5>
+                            <ul class="skillset">
+                                <li><img src="https://img.stackshare.io/service/2538/kEpgHiC9.png" style="height:18px;width:18px"/> HTML</li>
+                                <li><i class="fa fa-css3" aria-hidden="true"></i> CSS</li>
+                                <li><img src="https://img.stackshare.io/service/1209/javascript.jpeg" style="height:18px;width:18px"/> Javascript</li>
+                                <li><img src="https://img.stackshare.io/service/1014/f_3aOvZe.png" style="height:18px;width:18px"/> C#</li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <h5>Have had experience</h5>
+                            <ul class="skillset">
+                                <li><img src="https://img.stackshare.io/service/1020/OYIaJ1KK.png" style="height:18px;width:18px"/> React</li>
+                                <li>React Native</li>
+                                <li><img src="https://img.stackshare.io/service/1010/m8jf0po4imu8t5eemjdd.png" style="height:18px;width:18px"/> Java</li>
+                                <li>C</li>
+                                <li><i class="fa fa-microchip" aria-hidden="true"></i> Assembly (8051)</li>
+                                <li><img src="https://img.stackshare.io/service/1214/h5g3etjnacmazg8oq17z.jpeg" style="height:18px;width:18px"/> Matlab</li>
+                                <li><img src="https://img.stackshare.io/service/1014/f_3aOvZe.png" style="height:18px;width:18px"/> VB.Net</li>
+                                <li><img src="https://img.stackshare.io/service/993/pUBY5pVj.png" style="height:18px;width:18px"/> Python</li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <h5>Non-code</h5>
+                            <ul class="skillset">
+                                <li>MSOffice Family</li>
+                                <li>Photoshop / CorelDraw</li>
+                                <li>Basic Electrical Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
 <div>
     <section id="timeline">
         <div class="container-front" id="tl-style">

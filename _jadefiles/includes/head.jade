@@ -3,7 +3,7 @@ head
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='google-site-verification', content='OdvE3xqJ8NkJYNKjJi7KbbePe4lm4NV79o2Oaxk4-fY')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-  title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  title {% if page.title %}{{ page.title }} - {{site.title}}{% else %}{{ site.title }}{% endif %}
   {% if page.url == "/404.html" %}
   meta(http-equiv='refresh', content="5; url=/")
   {% endif %}

@@ -1,5 +1,5 @@
 | {% for timeline in site.timelines %}
 li.event(data-date='{{ timeline.year }}')
-  h3 {{ timeline.title }}
-  |   {{ timeline.content }}
+  h2 {{ timeline.title }}
+  {{ timeline.content }}
 | {% endfor %}
