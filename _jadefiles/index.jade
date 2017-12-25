@@ -6,7 +6,9 @@
 // top parallax
 #profile.scrollspy.parallax-container(style='height:75vh;background-color:rgba(0,0,0,0.2);z-index:-1;')
   .parallax
-    img.dim(src='{{ site.mainimg.top }}', alt='top main image', style='display:block;')
+    img.dim(src='https://res.cloudinary.com/hyuwah-github-io/image/upload/v1514133423/cattypefrenzy.gif', style='display:block')
+    //img.dim(src='https://res.cloudinary.com/hyuwah-github-io/image/upload/v1514132722/catwpm.gif', style='display:block')
+    //img.dim(src='{{ site.mainimg.top }}', alt='top main image', style='display:block;')
   .header-top.center-align.container-front(style="margin-top:15vh")
     div.hide-on-med-and-down(style="margin:-25px;margin-bottom:16px")
       img.responsive-img.circle(src="assets/images/pp-square.webp", width="96")
@@ -21,7 +23,7 @@ section.intro
           .card-content
             div.hide-on-large-only.center-align(style="margin:0px")
               img.responsive-img.circle(src="assets/images/pp-square.webp", width="96")
-            h3.blue-text.lighten-1 Hello there!
+            h3.blue-text.lighten-1.center-align Hello there!
             p.flow-text I'm Wahyu, fresh graduate with bachelor's degree in Physics from Universitas Padjadjaran. Full-time C# developer, part-time Web Developer.
 // Include Portfolio Items
 section.portfolio.blue.lighten-1
@@ -41,13 +43,15 @@ section.portfolio.blue.lighten-1
     img.dim(src='{{ site.mainimg.bottom }}', alt='bottom main image', style='display:block;')
 // bottom parallax
 // TOC
-ul#sticky.card-panel.section.table-of-contents.hide-on-med-and-down(style='margin:100px 0 0 85%;z-index:98;')
+ul#sticky.card-panel.section.table-of-contents.hide-on-med-and-down
   li
     a#toc-1(href='#profile',style='color:grey;') Profile
   li
     a#toc-2(href='#portfolio', style='color:grey;') Projects
   li
     a#toc-3(href='#contact', style='color:grey;') Contact
+  li
+    a#goup(href='#', style='color:grey') Go ⬏
 section.section(style='padding-bottom:0;')
   // contact form
   .container-front.fade-in(style='display: block; opacity: 1;')

@@ -11575,17 +11575,30 @@ header {
 .input-field .prefix.active {
   color: #2196f3; }
 
+ul#sticky {
+  margin: 85px 0 0 90%;
+  z-index: 98; }
+
 .table-of-contents a.active {
   border-left: 2px solid #2196f3; }
 
 .table-of-contents a:hover {
   border-left: 1px solid #2196f3; }
 
-.highlight:before {
+figure.highlight:before {
   content: "Code » " attr(data-lang);
   padding: 1px 10px;
   font-size: 12px;
   margin-top: 10px; }
+
+div.highlight:before {
+  content: "Code\a0\bb\a0";
+  padding: 1px 10px;
+  font-size: 12px;
+  margin-top: 10px; }
+
+pre.highlight:before {
+  display: none; }
 
 code {
   padding: 1px 8px; }

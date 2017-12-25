@@ -7,33 +7,36 @@ language: id
 excerpt_separator: <!--more-->
 frontimage: http://browningit.com/wp-content/uploads/2015/09/helloworld.gif
 ---
-Hello World!
+Obligatory _hello world_ post
 <!--more-->
+## Hello World!
 
-Halo Dunia!
+{% highlight html %}
+<h1>Hello World!</h1>
+{% endhighlight %}
 
-```C
+{% highlight c %}
 printf("Hello World!");
-```
+{% endhighlight %}
 
-```python
+{% highlight python %}
 print "Hello World!"
-```
+{% endhighlight %}
 
-```cs
+{% highlight c# %}
 Console.WriteLine("Hello World!");
-```
+{% endhighlight %}
 
-```js
+{% highlight javascript %}
 Console.log("Hello World!");
-```
+{% endhighlight %}
 
-```bash
+{% highlight bash %}
 echo "Hello World!"
-```
+{% endhighlight %}
 
-```java
+{% highlight java %}
 System.out.println("Hello World!");
-```
+{% endhighlight %}
 
 _Powered by_ [Jekyll](https://jekyllrb.com/).
