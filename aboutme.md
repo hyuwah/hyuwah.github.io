@@ -24,7 +24,7 @@ permalink: /aboutme/
                             </ul>
                         </div>
                         <div class="col s12 m6 l4">
-                            <h5>Have had experience</h5>
+                            <h5 class="tooltipped" data-position="top" data-delay="50" data-tooltip="Been using it in the past or are learning it">Have had experience</h5>
                             <ul class="skillset">
                                 <li>C</li>
                                 <li><i class="fa fa-microchip" aria-hidden="true"></i> Arduino / C++</li>
@@ -38,7 +38,7 @@ permalink: /aboutme/
                             </ul>
                         </div>
                         <div class="col s12 m6 l4">
-                            <h5>Non-code</h5>
+                            <h5 class="tooltipped" data-position="top" data-delay="50" data-tooltip="Other skills">Non-code</h5>
                             <ul class="skillset">
                                 <li>MS Office Family</li>
                                 <li>Photoshop / CorelDraw</li>

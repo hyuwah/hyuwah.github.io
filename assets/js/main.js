@@ -95,9 +95,10 @@ $(function () {
           // Fix overlay persist on mobile size
           if(document.getElementById("sidenav-overlay")!=null){
           document.getElementById("sidenav-overlay").remove();
+          document.getElementsByClassName("drag-target")[0].remove();
           document.getElementsByTagName("body")[0].style.overflow = "auto";
           }
-          
+
           // Remove your CSS animation reversing class
           $container.removeClass('is-exiting');
           // Inject the new content
