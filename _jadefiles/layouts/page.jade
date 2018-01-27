@@ -12,5 +12,9 @@
               h2.thin.blue-text {{ page.title }}
             .divider
             br
-            article.grey-text.text-darken-2.post-content
+            // Hide this on small screen
+            .grey-text.text-darken-2.post-content.hide-on-small-and-down
               | {{ content }}
+        // Show this instead
+        .grey-text.text-darken-2.post.content.hide-on-med-and-up(style='padding-right:0px;padding-left:0px;box-shadow:0 0px 0px 0')
+          | {{ content }}

@@ -17,16 +17,31 @@ permalink: /archives/
 
         <ul style="margin:12px 20px">
           {% for post in site.posts %}
-          <li style="margin-bottom:8px;">
-            <div class="chip">{% if post.language == 'id' %}
-            <img src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" style="vertical-align: middle;">
-            {% elsif post.language == 'en' %} 
-            <img src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language" style="vertical-align: middle;">
-            {% endif %} {{ post.date | date: "%-d %B %Y" }}</div>
-            <a href="{{ post.url }}">
+          <li style="margin-bottom:8px;display:flex">
+
+            <!-- Language + Date Chip on Medium & Up screen size -->
+            <div class="chip hide-on-small-and-down" style="flex:initial;min-width:150px;margin-right:8px;">
+              {% if post.language == 'id' %}
+              <img src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" style="vertical-align: middle;">
+              {% elsif post.language == 'en' %} 
+              <img src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language" style="vertical-align: middle;">
+              {% endif %} 
+              {{ post.date | date: "%-d %B %Y" }}
+            </div>           
+
+            <a href="{{ post.url }}" style="flex:10">
               {{ post.title }}
-            </a>
+            </a>          
+           
+            <!-- Small date on small screen -->
+            <div class="hide-on-med-and-up"
+            style="font-size:xx-small;font-weight:bold;
+                    margin-right:8px;align-self:center">
+              {{ post.date | date: "%-d %B %Y" }}
+            </div>
+
           </li>
+          <hr style="border-style:solid;border-color:#f3f3f3"/>
           {% endfor %}
         </ul>
 
@@ -45,21 +60,39 @@ permalink: /archives/
     <div class="collapsible-body">
 
         <ul style="margin:12px 20px">
-          {% for posts in category %} {% for post in posts %} {% if post.url %}
-          <li style="margin-bottom:8px">
+          {% for posts in category %} 
+          {% for post in posts %} 
+          {% if post.url %}
+          <li style="margin-bottom:8px;display:flex">
            
-            <div class="chip"> {% if post.language == 'id' %}
-            <img src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" style="vertical-align: middle;">
-            {% elsif post.language == 'en' %} 
-            <img src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language" style="vertical-align: middle;">
-            {% endif %} {{ post.date | date: "%-d %B %Y" }}</div>
-            <a href="{{ post.url }}">
+            <!-- Language + Date Chip on Medium & Up screen size -->            
+            <div class="chip hide-on-small-and-down" style="flex:initial;min-width:150px;margin-right:8px;">
+              {% if post.language == 'id' %}
+              <img src="{{ '/assets/images/indonesia.svg' | prepend: site.baseurl }}" alt="Bahasa Indonesia" style="vertical-align: middle;">
+              {% elsif post.language == 'en' %} 
+              <img src="{{ '/assets/images/united-states.svg' | prepend: site.baseurl }}" alt="English Language" style="vertical-align: middle;">
+              {% endif %} 
+              {{ post.date | date: "%-d %B %Y" }}
+            </div>
+        
+            <a href="{{ post.url }}" style="flex:10">
               {{ post.title }}
-            </a>
+            </a>          
+           
+            <!-- Small date on small screen -->            
+            <div class="hide-on-med-and-up"
+            style="font-size:xx-small;font-weight:bold;
+                    margin-right:8px;align-self:center">
+              {{ post.date | date: "%-d %B %Y" }}
+            </div>
+
           </li>
-          {% endif %} {% endfor %} {% endfor %}
+          <hr style="border-style:solid;border-color:#f3f3f3"/>
+          {% endif %} 
+          {% endfor %} 
+          {% endfor %}
         </ul>
-  </div>
+    </div>
   </li>
-{% endfor %}
+  {% endfor %}
 </ul>
