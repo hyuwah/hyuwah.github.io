@@ -69,7 +69,7 @@ sass:
     sass_dir: _sass
     style: compressed
 permalink: "/blog/:year/:month/:title/"
-gems:
+plugins:
     - jekyll-paginate
     - jekyll-feed
 

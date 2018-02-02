@@ -6,9 +6,9 @@ This is the source code for [hyuwah.github.io](http://hyuwah.github.io)
 
 ## Tech Used
 
-[Jekyll](http://http://jekyllrb.com/)
+SSG: [Jekyll](http://jekyllrb.com/)
 
-[Materializecss](http://materializecss.com/)
+CSS Framework: [Materializecss](http://materializecss.com/)
 
 ## Dependencies
 
@@ -33,6 +33,8 @@ TODO: explain dependencies
 * TODO: explain timelines Usage
 * TODO: explain gulp workflow (local development)
 * TODO: explain jade and scss Usage
+
+All `.html` files that have `.jade` files on `_jadefiles/` directory are auto-generated, don't directly edit it, edit the respective `.jade` files instead.
 
 ## Credits
 
