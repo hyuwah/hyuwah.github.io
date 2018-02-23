@@ -34,6 +34,9 @@ Run macOS inside VM.
 * Extract File .rar VMDK macOS nya
 
 * Install VMWare Player
+    * Buka terminal di lokasi file `.bundle` nya
+    * Di linux, ganti dulu file permissionnya jadi executable `chmod a+x VMware-Player-xxxxx.bundle`
+    * Baru execute as root `sudo ./VMware-Player-xxxxx.bundle`
 
 * Extract VMWare Tools / Patch
     * Patch VMWare 
