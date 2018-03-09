@@ -26,17 +26,23 @@ Sebenarnya bisa multiplatform, tapi tulisan ini buat linux.
 Pilih salah satu:   
 Pake **curl**
 
-* `sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl`
-* `sudo chmod a+rx /usr/local/bin/youtube-dl`
+{% highlight bash %}
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+{% endhighlight %}
 
 Pake **wget**
 
-* `sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl`
-* `sudo chmod a+rx /usr/local/bin/youtube-dl`
+{% highlight bash %}
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+{% endhighlight %}
 
 Pake **pip** (biasanya kalo udah ada python, udah otomatis ada pip)
 
-* `sudo pip install --upgrade youtube_dl`
+{% highlight bash %}
+sudo pip install --upgrade youtube_dl
+{% endhighlight %}
 
 
 #### Set alias
@@ -49,15 +55,22 @@ Contoh template alias:
 
 Buat download mp3 ke `~/Music/` dengan kualitas audio paling tinggi di _alias_ jadi **ytdlmp3**:
 
-`alias ytdlmp3='youtube-dl --output "~/Music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 0'`
+{% highlight bash %}
+alias ytdlmp3='youtube-dl --output "~/Music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 0'
+{% endhighlight %}
 
-Buat download video (biasanya mp4) ke `~/Videos/` dengan kualitas 480p di _alias_ jadi **ytdlvid480**:
+Buat download video (biasanya mp4) ke `~/Videos/` dengan kualitas 480p di **
+_alias_** jadi **ytdlvid480**:
 
-`alias ytdlvid480='youtube-dl --output "~/Videos/%(title)s.%(ext)s" -f "bestvideo[height<=480]+bestaudio/best[height<=480]"'`
+{% highlight bash %}
+alias ytdlvid480='youtube-dl --output "~/Videos/%(title)s.%(ext)s" -f "bestvideo[height<=480]+bestaudio/best[height<=480]"'
+{% endhighlight %}
 
-Buat download video (biasanya mp4) ke `~/Videos/` dengan kualitas 720p di _alias_ jadi **ytdlvid720**:
+Buat download video (biasanya mp4) ke `~/Videos/` dengan kualitas 720p di **_alias_** jadi **ytdlvid720**:
 
-`alias ytdlvid720='youtube-dl --output "~/Videos/%(title)s.%(ext)s" -f "bestvideo[height<=720]+bestaudio/best[height<=720]"'`
+{% highlight bash %}
+alias ytdlvid720='youtube-dl --output "~/Videos/%(title)s.%(ext)s" -f "bestvideo[height<=720]+bestaudio/best[height<=720]"'
+{% endhighlight %}
 
 Kalau mau explore option - option nya liat di [sini](https://github.com/rg3/youtube-dl#options)
 
@@ -65,9 +78,17 @@ Kalau mau explore option - option nya liat di [sini](https://github.com/rg3/yout
 
 Di terminal tinggal panggil aliasnya sama link video (ato bisa juga playlist / channel) youtubenya
 
-misal buat download mp3 [We Are - One Ok Rock](https://www.youtube.com/watch?v=nU307tV32B0) tinggal : `ytdlmp3 https://www.youtube.com/watch?v=nU307tV32B0`
+misal buat download mp3 [We Are - One Ok Rock](https://www.youtube.com/watch?v=nU307tV32B0) tinggal : 
 
-kalo mau videonya tinggal : `ytdlvid720 https://www.youtube.com/watch?v=nU307tV32B0`
+{% highlight bash %}
+ytdlmp3 https://www.youtube.com/watch?v=nU307tV32B0
+{% endhighlight %}
+
+kalo mau videonya tinggal : 
+
+{% highlight bash %}
+ytdlvid720 https://www.youtube.com/watch?v=nU307tV32B0
+{% endhighlight %}
 
 
 ### Sources

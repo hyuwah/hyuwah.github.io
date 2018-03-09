@@ -7,7 +7,9 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://hyuwah.github.io"
 
 # Site Variables
-logo: <img  src="/assets/favicon/favicon-96x96.png" width="24" style="vertical-align:middle;"> hyuwah<b>.github</b>.io
+#logo: <img  src="/assets/favicon/favicon-96x96.png" width="24" style="vertical-align:middle;"> hyuwah<b>.github</b>.io
+logo: <img  src="/assets/images/logo.png" width="48" style="vertical-align:middle;"> <b>.github</b>.io
+
 #image used on frontpage parallax
 mainimg:
   top: assets/images/pexels-photo.webp

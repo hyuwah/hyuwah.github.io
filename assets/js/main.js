@@ -16,7 +16,7 @@ function selectElementContents(el) {
   if (window.getSelection && document.createRange) {
     // IE 9 and non-IE
     var range = document.createRange();
-    range.selectNodeContents(el.firstChild.firstChild.firstChild.firstChild.lastChild);
+    range.selectNodeContents(el.firstChild);
     var sel = window.getSelection();
     sel.removeAllRanges();
     sel.addRange(range);
@@ -26,7 +26,7 @@ function selectElementContents(el) {
   } else if (document.body.createTextRange) {
     // IE < 9
     var textRange = document.body.createTextRange();
-    textRange.moveToElementText(el.firstChild.firstChild.firstChild.firstChild.lastChild);
+    textRange.moveToElementText(el.firstChild);
     textRange.select();
     document.execCommand('copy');
     Materialize.toast('Copied to clipboard', 3000)
@@ -172,7 +172,8 @@ var paket = function () {
     btn.setAttribute('onclick', 'selectElementContents(this.nextSibling);');
     // for IE
     btn.onclick = function () {
-      selectElementContents(this.nextSibling)
+      selectElementContents(this.nextSibling);
+     
     };
 
     btn.setAttribute('style', 'float: right; font-size: 0.8em; margin-right: -40px; background: #fff; border:0;');
@@ -180,6 +181,7 @@ var paket = function () {
     btn.innerHTML = '<i class="fa fa-clipboard tooltipped" data-position="bottom" data-delay="50" data-tooltip="Copy code"></i>';
     this.insertBefore(btn, this.firstChild);
   });
+
   $('.tooltipped').tooltip({
     delay: 50
   });
