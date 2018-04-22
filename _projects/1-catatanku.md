@@ -4,15 +4,14 @@ imgurl: "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1520599860/ca
 link: "https://github.com/hyuwah/android-catatanku"
 category: "Note-taking Android Apps"
 ---
-Deskripsi on progress..
-<div class="progress">
-      <div class="indeterminate"></div>
-  </div>
+
+<a href='https://play.google.com/store/apps/details?id=io.github.hyuwah.catatanku&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' style="width:40%"/></a>
 
 Simple note taking android app developed with Java. Basic CRUD using Cursor Loader pattern into SQLite database.
 
-[Download APK](https://drive.google.com/open?id=1LtvjbUGU_iYmHsORaDO8moAEPdO2WNZL)
+CatatanKu is a lightweight notepad application to keep track of your thoughts and ideas. 
 
-Preview:
-
-{% include image.html url="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1520600065/catatanku_v1.0_list.png" description="Main" %} 
+**Feature:**
+* Support Markdown Formatting.
+* Full text search
+* Chars & Words counter
