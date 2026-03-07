@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import BlogList from "../../components/blog/BlogList";
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const sortedPosts = posts.sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout
+    title="Blog - Muhammad Wahyudin"
+    description="Thoughts on software development and technology."
+>
+    <header class="mb-12">
+        <h1
+            class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-300 mb-4 tracking-tight"
+        >
+            Blog
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+            Thoughts on software development and technology.
+        </p>
+    </header>
+
+    <BlogList client:load posts={sortedPosts} />
+</Layout>

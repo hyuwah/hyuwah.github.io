@@ -1,33 +1,81 @@
-# Astro Starter Kit: Minimal
+# hyuwah-portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+A simple portfolio site built with Astro.
+
+## Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── content/           # Content collections
+│   │   ├── projects/      # Project entries (markdown)
+│   │   ├── blog/          # Blog posts (markdown)
+│   │   └── work/          # Work experience (markdown)
+│   ├── layouts/           # Layout components
+│   │   └── Layout.astro   # Base layout
+│   └── pages/             # Page routes
+│       ├── index.astro    # Homepage
+│       ├── projects/      # Projects list & detail
+│       ├── blog/          # Blog list & detail
+│       └── work/          # Work experience
+├── public/                # Static assets
+└── astro.config.mjs       # Astro config
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Adding Content
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Projects
 
-Any static assets, like images, can be placed in the `public/` directory.
+Create a new file in `src/content/projects/`:
 
-## 🧞 Commands
+```markdown
+---
+title: "Project Name"
+description: "Short description"
+tech: ["React", "TypeScript", "Node.js"]
+link: "https://example.com"
+github: "https://github.com/username/repo"
+featured: true
+order: 1
+---
 
-All commands are run from the root of the project, from a terminal:
+Longer description here...
+```
+
+### Blog Posts
+
+Create a new file in `src/content/blog/`:
+
+```markdown
+---
+title: "Post Title"
+description: "Short description"
+pubDate: 2024-01-15
+tags: ["tag1", "tag2"]
+draft: false
+---
+
+Your content here...
+```
+
+### Work Experience
+
+Create a new file in `src/content/work/`:
+
+```markdown
+---
+title: "Job Title"
+company: "Company Name"
+position: "Position"
+startDate: 2020-01-01
+endDate: 2023-12-31
+current: false
+order: 1
+---
+
+Description of your role...
+```
+
+## Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -35,9 +83,19 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Deployment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This site is configured for GitHub Pages. Build output goes to `dist/`.
+
+```bash
+npm run build
+```
+
+Then deploy the `dist` folder to GitHub Pages.
+
+## Notes
+
+- Edit markdown files directly in your favorite editor
+- Content is validated by the schema in `src/content/config.ts`
+- Simple styling is in `src/layouts/Layout.astro` - can be enhanced later
