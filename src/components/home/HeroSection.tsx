@@ -27,13 +27,29 @@ export default function HeroSection({ name }: HeroSectionProps) {
         Software Engineer with <strong>7+ YoE</strong> in the industry,
         specializes in Native <strong>Android Development</strong>.
       </p>
-      <p className="text-lg text-slate-500 dark:text-slate-500 leading-relaxed max-w-2xl mt-4">
-        I was a{" "}
-        <strong>Google Certified Associate Android Developer (Kotlin) </strong>
-        from 2019 until 2022. I'm passionate about creating innovative solutions
-        and user-friendly mobile apps, and I'm always looking for the best ways
-        to use technology to solve real-world problems.
-      </p>
+      <div className="flex flex-row max-md:flex-wrap gap-6 mt-4">
+        <a
+          href="https://www.credential.net/62f48fc6-dfef-4604-a900-b59a5d2cc17c"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer row-span-2 max-md:place-content-center"
+        >
+          <img
+            src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1689983366/hyuwah.github.io/associate-android-dev-badge-kotlin.png"
+            alt="Profile Picture"
+            className="max-md:w-32 w-md rounded-full"
+          />
+        </a>
+        <p className="text-lg text-slate-500 dark:text-slate-500 leading-relaxed max-w-2xl row-span-10">
+          I was a{" "}
+          <strong>
+            Google Certified Associate Android Developer (Kotlin){" "}
+          </strong>
+          from 2019 until 2022. I'm passionate about creating innovative
+          solutions and user-friendly mobile apps, and I'm always looking for
+          the best ways to use technology to solve real-world problems.
+        </p>
+      </div>
 
       {/* Social Links */}
       <div className="flex items-center gap-3 mt-8">

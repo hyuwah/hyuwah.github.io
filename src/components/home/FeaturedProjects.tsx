@@ -7,7 +7,7 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { ArrowRight, Github, ExternalLink } from "lucide-react";
+import { ArrowRight, Github, Play } from "lucide-react";
 
 interface Project {
   slug: string;
@@ -46,7 +46,7 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           <Card
             key={project.slug}
             onClick={() => (window.location.href = `/projects/${project.slug}`)}
-            className="hover:shadow-md transition-shadow cursor-pointer"
+            className="hover:shadow-md dark:shadow-slate-950 transition-shadow cursor-pointer"
           >
             <CardHeader className="pb-2">
               <div className="flex items-start justify-between">
@@ -62,7 +62,7 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   {project.data.github && (
-                    <Button variant="ghost" size="icon" asChild>
+                    <Button variant="outline" size="icon" asChild>
                       <a
                         href={project.data.github}
                         target="_blank"
@@ -74,14 +74,14 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                     </Button>
                   )}
                   {project.data.link && (
-                    <Button variant="ghost" size="icon" asChild>
+                    <Button variant="outline" size="icon" asChild>
                       <a
                         href={project.data.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <ExternalLink className="w-4 h-4" />
+                        <Play className="w-4 h-4" />
                       </a>
                     </Button>
                   )}

@@ -19,9 +19,9 @@ const recentPosts = posts
     .slice(0, 3);
 ---
 
-<Layout title="Muhammad Wahyudin - Software Engineer">
+<Layout title="Muhamad Wahyudin - Software Engineer">
     {/* Hero Section */}
-    <HeroSection client:load name="Muhammad Wahyudin" />
+    <HeroSection client:load name="Muhamad Wahyudin" />
 
     {/* Featured Projects */}
     <FeaturedProjects client:visible projects={featuredProjects} />
@@ -30,5 +30,5 @@ const recentPosts = posts
     <RecentPosts client:visible posts={recentPosts} />
 
     {/* Work Experience */}
-    <Experience client:visible work={work} />
+    <Experience client:visible work={work.map((w) => ({ data: w.data }))} />
 </Layout>

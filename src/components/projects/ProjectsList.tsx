@@ -1,6 +1,6 @@
 import { Card, CardContent } from "../ui/card";
 import { Badge, badgeVariants } from "../ui/badge";
-import { Github, ExternalLink, Code } from "lucide-react";
+import { Github, ExternalLink, Code, Play } from "lucide-react";
 import ImageModal from "../ui/ImageModal";
 
 interface Project {
@@ -100,7 +100,7 @@ export default function ProjectsList({
                         </div>
                       )}
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0 pt-0 pr-4">
+                    <div className="flex items-center gap-2 shrink-0 pt-1 pr-1">
                       {project.data.github && (
                         <a
                           href={project.data.github}
@@ -120,7 +120,7 @@ export default function ProjectsList({
                           className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
                           title="View Live"
                         >
-                          <ExternalLink className="w-5 h-5" />
+                          <Play className="w-5 h-5" />
                         </a>
                       )}
                     </div>
@@ -170,7 +170,7 @@ export default function ProjectsList({
                   className="flex items-start gap-4 p-4 -mx-4 rounded-xl transition-colors"
                 >
                   {project.data.image ? (
-                    <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-slate-700">
+                    <div className="w-20 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-slate-700">
                       <ImageModal
                         src={project.data.image}
                         alt={project.data.title}
@@ -178,7 +178,7 @@ export default function ProjectsList({
                       />
                     </div>
                   ) : (
-                    <div className="w-20 h-20 flex-shrink-0 rounded-lg bg-gray-100 dark:bg-slate-700 flex items-center justify-center text-gray-400 dark:text-gray-500">
+                    <div className="w-20 h-20 shrink-0 rounded-lg bg-gray-100 dark:bg-slate-700 flex items-center justify-center text-gray-400 dark:text-gray-500">
                       <Code className="w-8 h-8" />
                     </div>
                   )}
@@ -217,7 +217,7 @@ export default function ProjectsList({
                         )}
                       </div>
                       {project.data.type && (
-                        <span className="text-xs text-gray-400 flex-shrink-0">
+                        <span className="text-xs text-gray-400 shrink-0">
                           {project.data.type}
                         </span>
                       )}
@@ -242,7 +242,7 @@ export default function ProjectsList({
                     )}
                   </div>
 
-                  <ExternalLink className="w-5 h-5 text-gray-300 group-hover:text-gray-400 transition-colors flex-shrink-0 mt-1" />
+                  <ExternalLink className="w-5 h-5 text-gray-300 group-hover:text-gray-400 transition-colors shrink-0 mt-1" />
                 </a>
               </Card>
             ))}

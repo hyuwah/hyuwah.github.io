@@ -1,8 +1,8 @@
-import { Button } from '../ui/button';
-import { Badge } from '../ui/badge';
-import { Github, ExternalLink, ArrowLeft } from 'lucide-react';
-import ImageModal from '../ui/ImageModal';
-import type { ReactNode } from 'react';
+import { Button } from "../ui/button";
+import { Badge } from "../ui/badge";
+import { Github, ArrowLeft, Play } from "lucide-react";
+import ImageModal from "../ui/ImageModal";
+import type { ReactNode } from "react";
 
 interface Project {
   slug: string;
@@ -25,7 +25,10 @@ interface ProjectDetailProps {
   children: ReactNode;
 }
 
-export default function ProjectDetail({ project, children }: ProjectDetailProps) {
+export default function ProjectDetail({
+  project,
+  children,
+}: ProjectDetailProps) {
   return (
     <>
       <nav className="mb-8">
@@ -50,9 +53,7 @@ export default function ProjectDetail({ project, children }: ProjectDetailProps)
       <header className="mb-8">
         <div className="flex items-center gap-3 mb-4">
           {project.data.type && (
-            <Badge variant="secondary">
-              {project.data.type}
-            </Badge>
+            <Badge variant="secondary">{project.data.type}</Badge>
           )}
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100 mb-4 tracking-tight">
@@ -106,10 +107,10 @@ export default function ProjectDetail({ project, children }: ProjectDetailProps)
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ExternalLink className="w-5 h-5 mr-2" />
-              {project.data.link.includes('play.google.com')
-                ? 'Play Store'
-                : 'Live Demo'}
+              <Play className="w-5 h-5 mr-2" />
+              {project.data.link.includes("play.google.com")
+                ? "Play Store"
+                : "Live Demo"}
             </a>
           </Button>
         )}

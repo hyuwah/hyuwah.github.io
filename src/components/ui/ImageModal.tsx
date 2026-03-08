@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
 interface ImageModalProps {
@@ -96,17 +96,21 @@ export default function ImageModal({
 function EscapeKeyHandler({ onEscape }: { onEscape: () => void }) {
   if (typeof window === "undefined") return null;
 
-  const handler = (e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-      onEscape();
-    }
-  };
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onEscape();
+      }
+    };
 
-  window.addEventListener("keydown", handler);
+    window.addEventListener("keydown", handler);
 
-  return () => {
-    window.removeEventListener("keydown", handler);
-  };
+    return () => {
+      window.removeEventListener("keydown", handler);
+    };
+  }, [onEscape]);
+
+  return null;
 }
 
 function TeleportOrPortal({ children }: { children: React.ReactNode }) {
