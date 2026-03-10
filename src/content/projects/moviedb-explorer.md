@@ -5,7 +5,7 @@ description: "The MovieDB App with MVVM + Koin + Jetpack Navigation + Coroutine 
 tech: ["Android", "Kotlin", "MVVM", "Koin", "Jetpack Navigation", "Coroutines", "Retrofit", "Room"]
 github: "https://github.com/hyuwah/moviedb-explorer-app"
 order: 8
-featured: true
+featured: false
 type: "Android"
 image: "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1593113733/MovieDB%20Explorer/basic_flow.gif"
 starsBadge: "https://img.shields.io/github/stars/hyuwah/moviedb-explorer-app?style=social"

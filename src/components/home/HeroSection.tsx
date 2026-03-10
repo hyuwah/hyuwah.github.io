@@ -27,7 +27,7 @@ export default function HeroSection({ name }: HeroSectionProps) {
         Software Engineer with <strong>7+ YoE</strong> in the industry,
         specializes in Native <strong>Android Development</strong>.
       </p>
-      <div className="flex flex-row max-md:flex-wrap gap-6 mt-4">
+      <div className="flex flex-row max-md:flex-wrap gap-6 mt-4 justify-center">
         <a
           href="https://www.credential.net/62f48fc6-dfef-4604-a900-b59a5d2cc17c"
           target="_blank"
@@ -37,7 +37,7 @@ export default function HeroSection({ name }: HeroSectionProps) {
           <img
             src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1689983366/hyuwah.github.io/associate-android-dev-badge-kotlin.png"
             alt="Profile Picture"
-            className="max-md:w-32 w-md rounded-full"
+            className="max-md:w-32 w-md object-center rounded-full"
           />
         </a>
         <p className="text-lg text-slate-500 dark:text-slate-500 leading-relaxed max-w-2xl row-span-10">

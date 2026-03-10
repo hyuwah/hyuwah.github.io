@@ -39,20 +39,23 @@ export default function Experience({ work }: ExperienceProps) {
       </div>
 
       {/* Company Logos Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {companies.map((item) => (
           <a
             key={item.data.company}
             href="/work"
-            className="group flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            className="group flex flex-col items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
           >
             {item.data.companyLogo && (
               <img
                 src={item.data.companyLogo}
                 alt={item.data.company}
-                className="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                className="h-auto w-auto rounded-md object-contain opacity-70 group-hover:opacity-100 transition-opacity"
               />
             )}
+            <p className="text-center mt-2 text-xs font-semibold text-slate-600 dark:text-slate-400">
+              {item.data.company}
+            </p>
           </a>
         ))}
       </div>
