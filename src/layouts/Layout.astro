@@ -143,9 +143,32 @@ const currentPath = Astro.url.pathname;
             html.dark .prose ul {
                 margin-left: 1.5rem;
                 margin-bottom: 1.25rem;
+                list-style-type: disc;
+                padding-left: 0.5rem;
+            }
+            html.dark .prose ol {
+                margin-left: 1.5rem;
+                margin-bottom: 1.25rem;
+                list-style-type: decimal;
+                padding-left: 0.5rem;
+                font-variant-numeric: tabular-nums;
             }
             html.dark .prose li {
                 margin-bottom: 0.5rem;
+                line-height: 1.75;
+                padding-left: 0.25rem;
+            }
+            html.dark .prose ul ul {
+                list-style-type: circle;
+                margin-bottom: 0.25rem;
+            }
+            html.dark .prose ol ol {
+                list-style-type: lower-alpha;
+                margin-bottom: 0.25rem;
+            }
+            html.dark .prose li::marker {
+                color: #94a3b8;
+                font-size: 0.875em;
             }
             html.dark .prose a {
                 color: #60a5fa;
@@ -180,6 +203,38 @@ const currentPath = Astro.url.pathname;
                 color: inherit;
             }
 
+            /* Dark mode table styles */
+            html.dark .prose table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 1.25rem;
+                font-size: 0.875rem;
+                overflow-x: auto;
+                display: block;
+            }
+            html.dark .prose thead th {
+                background-color: #1e293b;
+                color: #e2e8f0;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                letter-spacing: 0.05em;
+                padding: 0.75rem 1rem;
+                border-bottom: 2px solid #475569;
+                text-align: left;
+            }
+            html.dark .prose tbody td {
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid #334155;
+                color: #cbd5e1;
+            }
+            html.dark .prose tbody tr:hover {
+                background-color: #1e293b;
+            }
+            html.dark .prose tbody tr:last-child td {
+                border-bottom: none;
+            }
+
             /* Light mode prose styles */
             .prose p {
                 margin-bottom: 1.25rem;
@@ -204,9 +259,32 @@ const currentPath = Astro.url.pathname;
             .prose ul {
                 margin-left: 1.5rem;
                 margin-bottom: 1.25rem;
+                list-style-type: disc;
+                padding-left: 0.5rem;
+            }
+            .prose ol {
+                margin-left: 1.5rem;
+                margin-bottom: 1.25rem;
+                list-style-type: decimal;
+                padding-left: 0.5rem;
+                font-variant-numeric: tabular-nums;
             }
             .prose li {
                 margin-bottom: 0.5rem;
+                line-height: 1.75;
+                padding-left: 0.25rem;
+            }
+            .prose ul ul {
+                list-style-type: circle;
+                margin-bottom: 0.25rem;
+            }
+            .prose ol ol {
+                list-style-type: lower-alpha;
+                margin-bottom: 0.25rem;
+            }
+            .prose li::marker {
+                color: #9ca3af;
+                font-size: 0.875em;
             }
             .prose a {
                 color: #2563eb;
@@ -237,6 +315,38 @@ const currentPath = Astro.url.pathname;
                 background-color: transparent;
                 padding: 0;
                 color: inherit;
+            }
+
+            /* Light mode table styles */
+            .prose table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 1.25rem;
+                font-size: 0.875rem;
+                overflow-x: auto;
+                display: block;
+            }
+            .prose thead th {
+                background-color: #f9fafb;
+                color: #111827;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                letter-spacing: 0.05em;
+                padding: 0.75rem 1rem;
+                border-bottom: 2px solid #d1d5db;
+                text-align: left;
+            }
+            .prose tbody td {
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid #e5e7eb;
+                color: #374151;
+            }
+            .prose tbody tr:hover {
+                background-color: #f9fafb;
+            }
+            .prose tbody tr:last-child td {
+                border-bottom: none;
             }
         </style>
     </head>
