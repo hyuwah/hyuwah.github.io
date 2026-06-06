@@ -1,7 +1,5 @@
 import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
-import { Badge } from "../ui/badge";
-import { Github, Linkedin, Code, ArrowRight, Briefcase } from "lucide-react";
+import { Github, Linkedin, Code, ArrowRight } from "lucide-react";
 
 interface HeroSectionProps {
   name: string;
@@ -18,62 +16,64 @@ export default function HeroSection({ name }: HeroSectionProps) {
     { href: "https://dev.to/hyuwah", icon: Code, label: "DEV.to" },
   ];
 
+  // Split name for accent treatment: "Muhamad" + "Wahyudin"
+  const nameParts = name.split(" ");
+  const firstName = nameParts.slice(0, -1).join(" ");
+  const lastName = nameParts[nameParts.length - 1];
+
   return (
-    <section className="mb-16">
-      <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-6 tracking-tight">
-        {name}
-      </h1>
-      <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-        Software Engineer with <strong>7+ YoE</strong> in the industry,
-        specializes in Native <strong>Android Development</strong>.
-      </p>
-      <div className="flex flex-row max-md:flex-wrap gap-6 mt-4 justify-center">
-        <a
-          href="https://www.credential.net/62f48fc6-dfef-4604-a900-b59a5d2cc17c"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cursor-pointer row-span-2 max-md:place-content-center"
-        >
-          <img
-            src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1689983366/hyuwah.github.io/associate-android-dev-badge-kotlin.png"
-            alt="Profile Picture"
-            className="max-md:w-32 w-md object-center rounded-full"
-          />
-        </a>
-        <p className="text-lg text-slate-500 dark:text-slate-500 leading-relaxed max-w-2xl row-span-10">
-          I was a{" "}
-          <strong>
-            Google Certified Associate Android Developer (Kotlin){" "}
-          </strong>
-          from 2019 until 2022. I'm passionate about creating innovative
-          solutions and user-friendly mobile apps, and I'm always looking for
-          the best ways to use technology to solve real-world problems.
+    <section className="mb-16 space-y-8">
+      {/* Name & Tagline */}
+      <div className="space-y-4">
+        <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+          {firstName}{" "}
+          <span className="text-accent-600 dark:text-accent-500">
+            {lastName}
+          </span>
+        </h1>
+        <p className="text-xl sm:text-2xl text-slate-700 dark:text-slate-300 font-medium max-w-2xl">
+          I build polished Android experiences with{" "}
+          <span className="text-accent-600 dark:text-accent-500">
+            Kotlin &amp; Jetpack Compose
+          </span>
+          .
         </p>
       </div>
 
-      {/* Social Links */}
-      <div className="flex items-center gap-3 mt-8">
-        {socialLinks.map((link) => (
-          <Button key={link.href} variant="outline" size="icon" asChild>
-            <a
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={link.label}
-            >
-              <link.icon className="w-5 h-5" />
-            </a>
-          </Button>
-        ))}
-      </div>
+      {/* Expanded Bio */}
+      <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+        Software Engineer with <strong>7+ years of experience</strong> crafting
+        native Android applications. Google Certified Associate Android
+        Developer (2019–2022). Passionate about clean architecture, smooth
+        animations, and turning complex problems into intuitive mobile
+        experiences.
+      </p>
 
-      <div className="flex items-center gap-4 mt-6">
-        <Button asChild>
+      {/* CTA Buttons */}
+      <div className="flex flex-wrap items-center gap-4">
+        <Button asChild size="lg">
           <a href="/projects">
             View Projects
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </Button>
+      </div>
+
+      {/* Social Links — Labeled */}
+      <div className="flex flex-wrap items-center gap-3">
+        {socialLinks.map((link) => (
+          <Button key={link.href} variant="outline" asChild>
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2"
+            >
+              <link.icon className="w-4 h-4" />
+              <span>{link.label}</span>
+            </a>
+          </Button>
+        ))}
       </div>
     </section>
   );

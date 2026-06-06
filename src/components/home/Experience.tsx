@@ -25,11 +25,16 @@ export default function Experience({ work }: ExperienceProps) {
     .slice(0, 4);
 
   return (
-    <section className="mb-16">
+    <section className="mb-16 animate-on-scroll">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
-          Experience
-        </h2>
+        <div>
+          <p className="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider mb-2">
+            Experience
+          </p>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+            Where I've Worked
+          </h2>
+        </div>
         <Button variant="ghost" asChild>
           <a href="/work">
             View all
@@ -44,13 +49,13 @@ export default function Experience({ work }: ExperienceProps) {
           <a
             key={item.data.company}
             href="/work"
-            className="group flex flex-col items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            className="group flex flex-col items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 hover:scale-105 transition-all duration-300"
           >
             {item.data.companyLogo && (
               <img
                 src={item.data.companyLogo}
                 alt={item.data.company}
-                className="h-auto w-auto rounded-md object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                className="h-auto w-auto rounded-md object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
               />
             )}
             <p className="text-center mt-2 text-xs font-semibold text-slate-600 dark:text-slate-400">

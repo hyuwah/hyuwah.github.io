@@ -19,11 +19,16 @@ export default function RecentPosts({ posts }: RecentPostsProps) {
   if (posts.length === 0) return null
 
   return (
-    <section className="mb-16">
+    <section className="mb-16 animate-on-scroll">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
-          Recent Posts
-        </h2>
+        <div>
+          <p className="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider mb-2">
+            Blog
+          </p>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+            Recent Posts
+          </h2>
+        </div>
         <Button variant="ghost" asChild>
           <a href="/blog">
             View all
@@ -42,7 +47,8 @@ export default function RecentPosts({ posts }: RecentPostsProps) {
                     {post.data.title}
                   </h3>
                   <time className="text-sm text-slate-400 flex-shrink-0">
-                    {post.data.pubDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+                    {post.data.pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    {' · '}{Math.max(1, Math.ceil((post.data.description?.split(' ').length || 600) / 200))} min read
                   </time>
                 </div>
                 {post.data.description && (

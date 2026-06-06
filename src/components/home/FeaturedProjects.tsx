@@ -28,11 +28,16 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   if (projects.length === 0) return null;
 
   return (
-    <section className="mb-16">
+    <section className="mb-16 animate-on-scroll">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
-          Featured Projects
-        </h2>
+        <div>
+          <p className="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider mb-2">
+            Projects
+          </p>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+            Featured Projects
+          </h2>
+        </div>
         <Button variant="ghost" asChild>
           <a href="/projects">
             View all
@@ -45,8 +50,7 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
         {projects.map((project) => (
           <Card
             key={project.slug}
-            onClick={() => (window.location.href = `/projects/${project.slug}`)}
-            className="hover:shadow-md dark:shadow-slate-950 transition-shadow cursor-pointer"
+            className="relative group hover:shadow-md dark:shadow-slate-950 transition-shadow"
           >
             <CardHeader className="pb-2">
               <div className="flex items-start justify-between">
@@ -54,13 +58,13 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   <CardTitle className="text-lg">
                     <a
                       href={`/projects/${project.slug}`}
-                      className="hover:underline"
+                      className="hover:underline after:absolute after:inset-0 after:content-['']"
                     >
                       {project.data.title}
                     </a>
                   </CardTitle>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 relative z-10">
                   {project.data.github && (
                     <Button variant="outline" size="icon" asChild>
                       <a

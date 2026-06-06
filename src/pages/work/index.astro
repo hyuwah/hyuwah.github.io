@@ -34,11 +34,11 @@ const renderedWork = await Promise.all(
 >
     <header class="mb-12">
         <h1
-            class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-300 mb-4 tracking-tight"
+            class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-300 mb-4 tracking-tight"
         >
             Work Experience
         </h1>
-        <p class="text-lg text-gray-600 dark:text-gray-300">
+        <p class="text-lg text-slate-600 dark:text-slate-300">
             My professional journey so far.
         </p>
     </header>
@@ -46,7 +46,7 @@ const renderedWork = await Promise.all(
     <div class="space-y-8 mb-16">
         {
             renderedWork.map((item) => (
-                <Card className="group bg-gray-50 dark:bg-slate-800 border-0 shadow-none">
+                <Card className="group bg-slate-50 dark:bg-slate-800 border-0 shadow-none">
                     <CardContent className="p-6 sm:p-8">
                         <div class="flex items-start gap-4 mb-6">
                             {item.data.companyLogo && (
@@ -61,14 +61,14 @@ const renderedWork = await Promise.all(
                             <div class="flex-1 min-w-0">
                                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                                     <div>
-                                        <h2 class="text-xl font-semibold text-gray-900 dark:text-slate-100">
+                                        <h2 class="text-xl font-semibold text-slate-900 dark:text-slate-100">
                                             {item.data.position}
                                         </h2>
-                                        <p class="text-gray-600 dark:text-slate-400 mt-1 mb-2">
+                                        <p class="text-slate-600 dark:text-slate-400 mt-1 mb-2">
                                             {item.data.company}
                                         </p>
                                     </div>
-                                    <time class="text-sm text-gray-400 shrink-0 flex items-center gap-1">
+                                    <time class="text-sm text-slate-400 shrink-0 flex items-center gap-1">
                                         <Calendar className="w-3 h-3" />
                                         {item.data.startDate.getFullYear()} —{" "}
                                         {item.data.endDate
@@ -79,7 +79,7 @@ const renderedWork = await Promise.all(
                             </div>
                         </div>
 
-                        <div class="prose prose-sm dark:prose-invert max-w-none text-gray-600 dark:text-slate-400 mb-6">
+                        <div class="prose prose-sm dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 mb-6">
                             <item.Content />
                         </div>
 
@@ -116,11 +116,11 @@ const renderedWork = await Promise.all(
     {
         otherExperience.length > 0 && (
             <section>
-                <h2 class="text-2xl font-semibold text-gray-900 dark:text-slate-100 mb-8">
+                <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100 mb-8">
                     Other Experience
                 </h2>
                 <div class="relative">
-                    <div class="absolute left-4 sm:left-8 top-2 bottom-2 w-px bg-gray-200 dark:bg-slate-700" />
+                    <div class="absolute left-4 sm:left-8 top-2 bottom-2 w-px bg-slate-200 dark:bg-slate-700" />
 
                     <div class="space-y-8">
                         {otherExperience.map((item) => (
@@ -135,17 +135,17 @@ const renderedWork = await Promise.all(
                                     style="top: 6px;"
                                 />
 
-                                <div class="pb-8 border-b border-gray-100 dark:border-slate-800 last:border-0">
+                                <div class="pb-8 border-b border-slate-100 dark:border-slate-800 last:border-0">
                                     <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-2">
                                         <div>
-                                            <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100">
+                                            <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
                                                 {item.data.position}
                                             </h3>
-                                            <p class="text-gray-600 dark:text-slate-400">
+                                            <p class="text-slate-600 dark:text-slate-400">
                                                 {item.data.company}
                                             </p>
                                         </div>
-                                        <time class="text-sm text-gray-400 shrink-0 flex items-center gap-1">
+                                        <time class="text-sm text-slate-400 shrink-0 flex items-center gap-1">
                                             <Calendar className="w-3 h-3" />
                                             {formatDate(
                                                 item.data.startDate,

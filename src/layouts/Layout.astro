@@ -27,6 +27,40 @@ const currentPath = Astro.url.pathname;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
         <meta name="description" content={description} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url.href} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://hyuwah.github.io/og-image.png" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={Astro.url.href} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://hyuwah.github.io/og-image.png" />
+
+        <!-- Canonical -->
+        <link rel="canonical" href={Astro.url.href} />
+
+        <!-- JSON-LD Person Schema -->
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Muhamad Wahyudin",
+          "url": "https://hyuwah.github.io",
+          "jobTitle": "Software Engineer",
+          "sameAs": [
+            "https://github.com/hyuwah",
+            "https://www.linkedin.com/in/hyuwah/",
+            "https://dev.to/hyuwah"
+          ]
+        })} />
+
+        <!-- TODO: Create public/og-image.png (1200x630 recommended) for social sharing previews -->
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -365,5 +399,25 @@ const currentPath = Astro.url.pathname;
             {/* Footer - Using React Footer component */}
             <Footer client:visible />
         </div>
+
+        <script is:inline>
+            document.addEventListener('DOMContentLoaded', () => {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+                );
+
+                document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+                    observer.observe(el);
+                });
+            });
+        </script>
     </body>
 </html>

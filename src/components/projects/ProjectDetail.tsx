@@ -41,7 +41,7 @@ export default function ProjectDetail({
       </nav>
 
       {project.data.image && (
-        <div className="mb-8 rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800">
+        <div className="mb-8 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800">
           <ImageModal
             src={project.data.image}
             alt={project.data.title}
@@ -56,11 +56,11 @@ export default function ProjectDetail({
             <Badge variant="secondary">{project.data.type}</Badge>
           )}
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100 mb-4 tracking-tight">
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 tracking-tight">
           {project.data.title}
         </h1>
         {project.data.subtitle && (
-          <p className="text-lg text-gray-500 dark:text-slate-400 mb-4">
+          <p className="text-lg text-slate-500 dark:text-slate-400 mb-4">
             {project.data.subtitle}
           </p>
         )}
@@ -126,7 +126,7 @@ export default function ProjectDetail({
         </div>
       )}
 
-      <hr className="border-gray-100 dark:border-slate-800 mb-8" />
+      <hr className="border-slate-100 dark:border-slate-800 mb-8" />
 
       <article className="prose dark:prose-invert max-w-none">
         {children}

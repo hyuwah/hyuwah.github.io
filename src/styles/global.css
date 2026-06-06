@@ -1,3 +1,42 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-accent-50: #ecfdf5;
+  --color-accent-100: #d1fae5;
+  --color-accent-200: #a7f3d0;
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+  --color-accent-800: #065f46;
+  --color-accent-900: #064e3b;
+}
+
+/* Scroll-triggered fade-in animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.visible {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+/* Stagger children */
+.animate-on-scroll.visible > *:nth-child(1) { animation-delay: 0ms; }
+.animate-on-scroll.visible > *:nth-child(2) { animation-delay: 80ms; }
+.animate-on-scroll.visible > *:nth-child(3) { animation-delay: 160ms; }
+.animate-on-scroll.visible > *:nth-child(4) { animation-delay: 240ms; }
+.animate-on-scroll.visible > *:nth-child(5) { animation-delay: 320ms; }

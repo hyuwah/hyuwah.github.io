@@ -33,11 +33,11 @@ export default function BlogPost({ post, children }: BlogPostProps) {
 
       <article>
         <header className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100 mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 tracking-tight">
             {post.data.title}
           </h1>
           
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-slate-400">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
             <time className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               {post.data.pubDate.toLocaleDateString('en-US', { 
@@ -68,7 +68,7 @@ export default function BlogPost({ post, children }: BlogPostProps) {
           )}
         </header>
 
-        <hr className="border-gray-100 dark:border-slate-800 mb-8" />
+        <hr className="border-slate-100 dark:border-slate-800 mb-8" />
 
         <div className="prose dark:prose-invert max-w-none">
           {children}
